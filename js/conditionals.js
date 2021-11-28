@@ -123,9 +123,19 @@ console.log(calculateTotal(4,100));
  * price before the discount was, and what their price after the discount is.
  */
  Generate a random number between 0 and 6
- var luckyNumber = Math.floor(Math.random() * 6);
-var askRandom=prompt("");
-
+var luckyNumber = Math.floor(Math.random() * 6);
+var askTotal=prompt("How much is your total bill?");
+    if(luckyNumber===0){
+        alert("You get no Discount!")
+    }else if(luckyNumber===1){
+        alert("you get 10% discount " +"and your new total is "+ (askTotal-(askTotal*.1)));
+    }else if(luckyNumber===2){
+        alert("you get 25% discount " +"and your new total is "+(askTotal-(askTotal*.25)));
+    }else if(luckyNumber===3){
+        alert("you get 35% discount " +"and your new total is "+(askTotal-(askTotal*.35)));
+    }else if(luckyNumber===4){
+        alert("you get 50% discount " +"and your new total is "+(askTotal-(askTotal*.5)));
+    }
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -144,3 +154,18 @@ var askRandom=prompt("");
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+var ask= confirm("Would you like to enter a number?");
+if (ask==true){
+    var askNum= prompt("Enter your number.");
+    if(askNum%2 ==0){
+        //alert("The number is even");
+    }else if(askNum%2 !==0){
+        alert("The number is not even");
+    }
+        //alert("The number plus 100 is " + parseInt(askNum+100);
+    if(askNum>0){
+       //alert("The number is postive.");
+    }else{
+        alert("The number is negative.");
+    }
+}
