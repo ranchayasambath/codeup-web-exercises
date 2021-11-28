@@ -21,6 +21,16 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+/*function analyzeColors(input) {
+    if (input =="green"){
+        return (input + " Lantern: in darkest days....");
+    } else if (input == "yellow"){
+        return (input + " is the color of fear.");
+    }else{
+        return(input + " is not a lantern corp color.");
+    }
+}
+console.log(analyzeColors("green"));*/
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -34,19 +44,40 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+//console.log(analyzeColors(randomColor));
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
+switch(colors) {
+    case"red":
+        return("Red is the color of rage.");
+        break;
+    case"blue":
+        return("Blue is the color harmony.");
+        break;
+    default:
+        return("They are part of lantern corp.");
+        break;
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+var ask =prompt("Whats your favorite lantern corp?");
+switch(ask) {
+    case"red":
+        alert("Red is the color of rage.");
+        break;
+    case"blue":
+        alert("Blue is the color harmony.");
+        break;
+    default:
+        alert("They are part of lantern corp.");
+        break;
+}
 /* ########################################################################## */
 
 /**
