@@ -124,7 +124,7 @@ console.log(calculateTotal(4,100));
  */
  Generate a random number between 0 and 6
  var luckyNumber = Math.floor(Math.random() * 6);
-var askRandom=prompt("")
+var askRandom=prompt("");
 
 /**
  * TODO:
