@@ -419,8 +419,6 @@ function sumOfSquare(a,b){
     return square(add(a,b));
 }
 console.log(sumOfSquare(10,10));
-//
-
 //Write a function called doMath(operator, a, b) that takes 3 parameters. The
 //first parameter is the name of the math function you want to apply. a and b
 // are the two numbers to run that function on.
@@ -429,3 +427,20 @@ function doMath(operator,a ,b){
     //The "eval" function was useful.
 }
 console.log(doMath("*",5,4));
+
+//Even More Function Bonuses
+//1.Create a function that will return how many whitespace characters are at the beginning and end of a string.
+function wSpace(str){
+    return(str.length - str.trim().length);
+}
+console.log(wSpace("  Hello "));
+//2.Create a function that takes in two string inputs.
+//If the second string input is present in the first,
+// return the first input string with the second input string removed from it.
+//If the second string input is present multiple times in the first,
+// the second string will only be removed where it first occurs in the first string.
+//If the second string input is not present in the first,
+//return the first string as entered in the function.
+function twoStrings(str1,str2){
+
+}
