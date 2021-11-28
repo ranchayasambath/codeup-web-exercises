@@ -300,7 +300,9 @@ function absoluteValue(number){
 console.log(absoluteValue(-6));
 //Make roll dice function:
 function rollDice(sides){
-    return(Math.random(sides));
+    return(Math.floor(Math.random()*(sides)));
 }
 console.log(rollDice(6));
-//FINISHED?
+
+
+
