@@ -415,16 +415,17 @@ function square(a){
 console.log(square(10));
 //Write a function called sumOfSquares(a, b)
 // that uses only your add() function and your square function and not + or * operators
-//function sumOfSquare(a,b){
-    //return(Math.pow()*(a.add(b)));
-//}
-//console.log(sumOfSquare(10,10));
-//.ADD() DOESN'T WORK!!!!!!!!!!
+function sumOfSquare(a,b){
+    return square(add(a,b));
+}
+console.log(sumOfSquare(10,10));
+//
 
 //Write a function called doMath(operator, a, b) that takes 3 parameters. The
 //first parameter is the name of the math function you want to apply. a and b
 // are the two numbers to run that function on.
 function doMath(operator,a ,b){
-    return(a,operator,b;
+    return eval(a+operator+b);
+    //The "eval" function was useful.
 }
-console.log(doMath());
+console.log(doMath("*",5,4));
