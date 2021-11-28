@@ -210,4 +210,97 @@ function cubeRoot(n){
     return(Math.cbrt(n));
 }
 console.log(cubeRoot(100));
-//
+//Make invert Sign Function
+function invertSign(number) {
+    if (number > 0) {
+        return (number * -1);
+    } else if (number < 0) {
+        return (number * -1);
+        }else{
+        return false;
+    }
+    }
+console.log(invertSign("no"));
+//Make degreesToRadians(number):
+function degreesToRadians(number){
+    return(number* Math.PI/180);
+}
+console.log(degreesToRadians(180));
+//Make radiansToDegree(number):
+function radiansToDegree(number){
+    return(number*180/Math.PI);
+}
+console.log(radiansToDegree(3.141592653589793));
+//Make a function isBlank(input):
+function isBlank(input) {
+    if (input.includes(" ")) {
+        return "Has Space.";
+    } else if (input.includes("\n")) {
+        return "Has New line.";
+    } else if (input.includes("\t")) {
+        return "Has Tab.";
+    }
+}
+console.log(isBlank("hello\tworld"));
+//Make a function trim(string):
+function trim(string){
+   let tString=string.trim();
+   return(tString);
+   //return(string);
+}
+console.log(trim(" hello world"));
+//Make function that returns if both value the same:
+function areEqual(input1,input2){
+    if (input1==input2)
+    {
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(areEqual(1,"1"));
+//Make function that returns if both value and data are the same:
+function areIdenticle(input1,input2){
+    if(input1===input2){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(areIdenticle(1,"1"));
+//Make a function with flipped boolean:
+function not(input){
+    return(!input);
+}
+console.log(not(false));
+//Make a function that negate the negation:
+function noNot(input){
+    return(!!input);
+}
+console.log(noNot(true));
+//Make a function that returns the logical operation of AND:
+function and(predicate1,predicate2){
+    return(predicate1 && predicate2);
+}
+console.log(and(true,false));
+//Make a function that returns the logical operation of OR:
+function or(predicate1,predicate2){
+    return(predicate1 || predicate2);
+}
+console.log(or(true,false));
+//Make a function that reverses a string:
+function reverseString(string){
+  return(string.split("").reverse().join(""));
+}
+console.log(reverseString("apple pie"));
+//Make Absolute Value function:
+function absoluteValue(number){
+    return(Math.abs(number));
+}
+console.log(absoluteValue(-6));
+//Make roll dice function:
+function rollDice(sides){
+    return(Math.random(sides));
+}
+console.log(rollDice(6));
+//FINISHED?
