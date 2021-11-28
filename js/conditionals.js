@@ -99,6 +99,20 @@ switch(ask) {
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(num,total){
+    if(num==0){
+        return("You get no Discount!")
+    }else if(num===1){
+        return("you get 10% discount " +"and your new total is "+ (total-(total*.1)));
+    }else if(num===2){
+        return("you get 25% discount " +"and your new total is "+(total-(total*.25)));
+    }else if(num===3){
+        return("you get 35% discount " +"and your new total is "+(total-(total*.35)));
+    }else if(num===4){
+        return("you get 50% discount " +"and your new total is "+(total-(total*.5)));
+    }
+}
+console.log(calculateTotal(4,100));
 
 /**
  * TODO:
@@ -108,8 +122,9 @@ switch(ask) {
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ Generate a random number between 0 and 6
+ var luckyNumber = Math.floor(Math.random() * 6);
+var askRandom=prompt("")
 
 /**
  * TODO:

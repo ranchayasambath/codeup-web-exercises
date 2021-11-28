@@ -442,5 +442,4 @@ console.log(wSpace("  Hello "));
 //If the second string input is not present in the first,
 //return the first string as entered in the function.
 function twoStrings(str1,str2){
-
 }
