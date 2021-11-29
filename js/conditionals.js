@@ -112,7 +112,7 @@ function calculateTotal(luckyNumber,total){
     }else if(luckyNumber==4){
         return("you get 50% discount " +"and your new total is "+(total-(total*.5)));
     }else{
-        return("You'll get everything free");
+        return("You'll get everything for free");
     }
 }
 console.log(calculateTotal(luckyNumber,100));
