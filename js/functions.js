@@ -73,7 +73,7 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function calculateTip(bill,tip){
-    return((bill/tip)/1);
+    return((bill/tip));
 }
 console.log(calculateTip(50,10));
 
