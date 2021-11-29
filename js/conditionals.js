@@ -155,17 +155,20 @@ var askTotal=prompt("How much is your total bill?");
  * HINT: The way we prompt for a value could be improved
  */
 var ask= confirm("Would you like to enter a number?");
-if (ask==true){
-    var askNum= prompt("Enter your number.");
-    if(askNum%2 ==0){
+if (ask==true) {
+    var askNum = prompt("Enter your number.");
+    if (askNum % 2 == 0) {
         //alert("The number is even");
-    }else if(askNum%2 !==0){
-        alert("The number is not even");
+    } else if (askNum % 2 !== 0) {
+        //alert("The number is not even");
     }
-        //alert("The number plus 100 is " + parseInt(askNum+100);
-    if(askNum>0){
-       //alert("The number is postive.");
+    //alert("The number plus 100 is " + parseInt(askNum+100);
+    if (askNum > 0) {
+        //alert("The number is postive.");
+    } else {
+        //alert("The number is negative.");
+    }
     }else{
-        alert("The number is negative.");
+        alert ("the number is not data type.")
     }
-}
+
