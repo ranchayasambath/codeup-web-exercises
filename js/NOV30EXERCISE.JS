@@ -63,8 +63,10 @@ function allFunctionExecute() {
 allFunctionExecute();
 
 //6.Copy and execute the following functions, and find the Error: (Hint: try console logging the result)
+
 //let myFunction (firstName, lastName)
 // return firstName + lastName; };
+
 //function thatsNotMyName(name){
 // if(name = "Laura"){
 // return "that's me!, I'm " + "name"}

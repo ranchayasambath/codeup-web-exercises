@@ -21,7 +21,7 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-/*function analyzeColors(input) {
+function analyzeColors(input) {
     if (input =="green"){
         return (input + " Lantern: in darkest days....");
     } else if (input == "yellow"){
@@ -30,7 +30,7 @@
         return(input + " is not a lantern corp color.");
     }
 }
-console.log(analyzeColors("green"));*/
+console.log(analyzeColors("green"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -159,19 +159,20 @@ var askTotal=prompt("How much is your total bill?");
  */
 var ask= confirm("Would you like to enter a number?");
 if (ask==true) {
-    var askNum = prompt("Enter your number.");
+    let askNum = prompt("Enter your number.");
     if (askNum % 2 == 0) {
-        //alert("The number is even");
-    } else if (askNum % 2 !== 0) {
-        //alert("The number is not even");
-    }
-    //alert("The number plus 100 is " + parseInt(askNum+100);
-    if (askNum > 0) {
-        //alert("The number is postive.");
-    } else {
-        //alert("The number is negative.");
-    }
+            alert("The number is Even");
+        } else if (askNum % 2 !== 0) {
+            alert("The number is  Odd");
+        }
+        let askNum2=parseInt(askNum)+ parseInt(100);
+            alert("The number plus 100 is " + askNum2);
+        if (askNum2 > 0) {
+            alert("The number is postive.");
+        } else {
+            alert("The number is negative.");
+        }
     }else{
-        alert ("the number is not data type.")
-    }
+        alert ("Operation cancelled.")
+}
 
