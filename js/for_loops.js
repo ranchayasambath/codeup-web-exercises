@@ -11,11 +11,9 @@ let i = Math.floor(Math.random() * (200 - 20) + 20);
  }else console.log(i + " is odd");
 }
 //-----------------------------------------------
-let i=0;
-let j=0;
-for (i = 0; i <=9; i++){
+for (let i = 1; i <=9; i++){
     let end = [];
-for (j= 0; j <=i; j++){
+for (let j= 0; j <=i; j++){
     end.push("");
 }
 console.log(end.join(i));
