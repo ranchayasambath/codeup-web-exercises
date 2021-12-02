@@ -1,21 +1,23 @@
 //Not working?!
-function showMultiplicationTable(num) {
+    let showMultiplicationTable = 10//prompt("enter your number") ;
     for (let i = 1; i <= 10; i++) {
-        result = (i * num);
+        console.log(showMultiplicationTable + "x" + i + "=" + (showMultiplicationTable * i));
     }
-    console.log(showMultiplicationTable(9));
+    for (let i = 1; i <= 10; i++) {
+    let i = Math.floor(Math.random() * (200 - 20) + 20);
+    if (i % 2 == 0) {
+        console.log(i + " is even");
+    } else console.log(i + " is odd");
 }
-    for (let i = 1; i <= 10; i++) {
-        var num1 = Math.floor(Math.random() * (200 - 20) + 20);
-        if (num1 % 2 == 0) {
-            console.log(num1 + " is even");
-        } else console.log(num1 + " is odd");
+let i=0;
+let j=0;
+for (i = 0; i <=9; i++) {
+    let end = [];
+    for (j= 0; j <=i; j++) {
+        end.push("");
     }
-    for (let i = 1; i <= 9; i++) {
-        for (let j = 1; j <= i; j++) {
-            console.log(i);
-        }
-    }
+    console.log(end.join(i));
+}
     for (i = 100; i >= 5; i -= 5) {
         console.log(i);
     }
