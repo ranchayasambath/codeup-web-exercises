@@ -1,15 +1,15 @@
 //Exercise:
-/* function parkingSpots(input){
+/* function parking(input){
 
-    let openSpots = 0;
-    console.log(`There are ${input} spots in this lot.`)
+    let spot = 0;
+    console.log(`There are ${input} parking spots.`)
 
     for (let i = input; i > 0; i--){
-        openSpots++
-        console.log(`There are : ${openSpots} Parking.`)
+        spot++
+        console.log(`There are : ${spot} parking spot(s) available..`)
     }
 }
-parkingSpots(20); */
+parking(20); */
 //--------------------------------------------------------------------------------
 //while(!parked) is the same as while(parked) == parked= false;//
 /*let usedSpots = 20;
@@ -18,7 +18,7 @@ while(usedSpots > 0){
     console.log(`there are ${20- usedSpots} available.`)};*/
 //--------------------------------------------------------------------------------
 //BEST EXAMPLE:
-/*let parkingSpots = 20
+let parkingSpots = 20
 let emptyParkingSpotNum = Math.floor(Math.random() * 20)
 let i = 0;;
 while(i <= parkingSpots) {
@@ -28,8 +28,8 @@ while(i <= parkingSpots) {
         console.log("park in spot " + i)
         break;
     }
-    console.log(i)
-};*/
+    //console.log(i)
+};
 //----------------------------------------------------------------------------------------
 /*let i= 0;
 while(i<=15){
@@ -45,8 +45,8 @@ do {
 } while (i <=15);*/
 //----------------------------------------------------------------------------------------
 // loop through numbers 0 - 50 by 2s
-let i=0;
+/*let i=0;
 do{
     console.log("loop through numbers by 2: ", i); /*i++;i++; */ i=i+2;
-} while(i <=50);
+//} while(i <=50);
 //-----------------------------------------------------------------------------------------
