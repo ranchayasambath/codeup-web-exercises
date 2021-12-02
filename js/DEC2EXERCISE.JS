@@ -8,9 +8,9 @@
         openSpots++
         console.log(`There are : ${openSpots} Parking.`)
     }
-
 }
 parkingSpots(20); */
+//--------------------------------------------------------------------------------
 //while(!parked) is the same as while(parked) == parked= false;//
 /*let usedSpots = 20;
 while(usedSpots > 0){
