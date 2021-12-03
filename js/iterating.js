@@ -41,10 +41,12 @@
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+    // names.forEach(function(name) {
+    //     console.log(name);
+    // });
+    names.forEach((name) => console.log(name));
 
-    names.forEach(function(name) {
-        console.log(name);
-    });
+    //cleaner ^^^
     console.log("---------------------------------------------")
     /**
      * TODO:
@@ -60,7 +62,7 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    let i = ["Apple", "Banana", "Strawberry", "Mango"]
+    let i = ["Apple", "Banana", "Strawberry", "Mango", "Raspberry"];
 
     let one = function (i) {
         return i[0];
@@ -76,7 +78,4 @@
         return i[i.length - 1];
     }
     console.log(three(i));
-
-
-
 })();
