@@ -24,7 +24,7 @@ while(true) {
     }
 }
 
-for (let i = 1; i < 50; i+=2) {
+for (let i = 1; i < 50; i=i+2) {
     if(i == ask){
         console.log("Yikes! Skipping number: " + i);
         continue;

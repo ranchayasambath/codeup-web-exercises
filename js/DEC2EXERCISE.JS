@@ -47,7 +47,7 @@ do {
 // loop through numbers 0 - 50 by 2s
 //let i=0;
 //do{
-    //console.log("loop through numbers by 2: ", i); /*i++;i++; */ i=i+2;
+    //console.log("loop through numbers by 2: ", i); i=i+2;
 //} while(i <=50);
 //-----------------------------------------------------------------------------------------
 /*let i=1
@@ -73,7 +73,7 @@ alert("Password Accepted"); */
 //1. Starting point;
 //2. Stopping point;
 //3. How to iterate;
-//for(let i = 0; i <= 15; i++ /* i+=3){
+//for(let i = 0; i <= 15; i++ /* i+=3 (count by 3 instead of 1)*/){
     //console.log("My favorite number is: " + i);
 //}
 // A WHILE LOOP EXAMPLE:
@@ -98,3 +98,4 @@ for(let counter = 1; counter <= 5; counter++){
         console.log("Second counter: " + counterTwo);
     }
 }
+//---------------------------------------------------------------
