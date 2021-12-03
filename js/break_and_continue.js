@@ -14,7 +14,7 @@
 // }
 //----------------------------------------------------------------------
 let even = function(ask) {
-    return ((ask % 2) !== 1);
+    return (ask % 2 === 0);
 }
 
 while(true) {
@@ -31,21 +31,4 @@ for (let i = 1; i < 50; i+=2) {
     }
         console.log("Here is an odd number: " + i);
 }
-//------------------------------------------------------
-// GREAT CODE BUT THE SKIP PLACEMENT IS OFF:
-// let isOdd = function(number) {
-//     return ((number % 2) == 1);
-// }
-//
-// while(true) {
-//     var number = prompt("Give me an Odd number between 1 and 50.")
-//     if (isOdd(number) && (number >= 1 && number <= 50)) {
-//         break;
-//     }
-// }
-//
-// for (let x = 1; x < 50; x+=2) {
-//     (x == number)
-//         ? console.log("Yikes! Skipping number: " + x)
-//         : console.log("Here is an odd number: " + x);
-// }
+//---------------------------------------------------------------------------
