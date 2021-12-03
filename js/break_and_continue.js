@@ -11,24 +11,49 @@
 //     if(ask == i%2 !==0){
 //         continue;
 //     }
-// }
+// }NOT WORKING!^^^^^^^^^^^^^^^^^^^^^^^^
 //----------------------------------------------------------------------
-let even = function(ask) {
-    return (ask % 2 === 0);
-}
-
-while(true) {
-    var ask = prompt("Enter odd number between 1 and 50.")
-    if (!even(ask) && (ask >= 1 && ask <= 50)) {
+// let even = function(ask) {
+//     return (ask % 2 === 0);
+// }
+//
+// while(true) {
+//     var ask = prompt("Enter odd number between 1 and 50.")
+//     if (!even(ask) && (ask >= 1 && ask <= 50)) {
+//         break;
+//     }
+// }
+//----------------------------------------------------------------------------
+// for (let i = 1; i < 50; i=i+2) {
+//     if(i == ask){
+//         console.log("Yikes! Skipping number: " + i);
+//         continue;
+//     }
+//         console.log("Here is an odd number: " + i);
+// }
+//---------------------------------------------------------------------------
+//DO WHILE LOOP EXAMPLE:
+var userNumber = 0;
+do {
+    userNumber = Number(prompt("Enter odd number between 1 and 50."));
+    if (userNumber <1 || userNumber > 50) {
+        alert("Number out of bounds")
+    } else if (userNumber % 2 ===0){
+        alert("Number is not Odd")
+    } else if (isNaN(userNumber)) {
+        alert("That's not a number")
+    }else{
+        alert("Yay! valid number.")
         break;
     }
-}
+}while(true)
 
-for (let i = 1; i < 50; i=i+2) {
-    if(i == ask){
-        console.log("Yikes! Skipping number: " + i);
+console.log("Number to skip is: " + userNumber)
+for (var i=1; i <=50, i+=2) {
+    if (i === userNumber) {
+        console.log("Yikes: Skipping number: " + userNumber);
         continue;
     }
-        console.log("Here is an odd number: " + i);
+    console.log("Here is an odd number: " + i);
 }
-//---------------------------------------------------------------------------
+//-------------------------------------------------------
