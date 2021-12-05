@@ -3,12 +3,12 @@ let showMultiplicationTable = /*prompt("enter your number");*/10
 for (let i = 1; i <= 10; i++) {
     console.log(showMultiplicationTable + "x" + i + "=" + (showMultiplicationTable * i));
 }
-//function {
-// for (let i = 1; i <= 10; i++) {
-//      let answer= x*1 ;
-//      console.log(x  + "x" + i + "=" + x * i);
-//}
-//}showMultiplicationTable(x:7);
+// function showMultiplicationTable(x){
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(x  + "x" + i + "=" + x * i);
+//     }
+// }
+// showMultiplicationTable(4);
 //------------------------------------------------
 for (let i = 1; i < 10; i++) {
     var rando = Math.floor(Math.random() * (200 - 20) + 20);
