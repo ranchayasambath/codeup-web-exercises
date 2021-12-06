@@ -59,13 +59,9 @@ let person = {
         let discount = shopper.amount * .12
         let discountedTotal = shopper.amount - discount;
         if (shopper.amount > 200) {
-            console.log(`${shopper.name}gets a discount
-            The original price was $${shopper.amount},
-            The discount is $${discount}
-            The total due is $${discountedTotal}`);
+            console.log(`${shopper.name} gets a discount\nThe original price was $${shopper.amount}\nThe discount is $${discount}\nThe total due is $${discountedTotal}`);
         }else{
-            console.log(`${shopper.name} does  not get a discount
-            the total due is $${shopper.amount}`);
+            console.log(`${shopper.name} does not get a discount\nthe total due is $${shopper.amount}`);
         }
     });
 
