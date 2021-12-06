@@ -24,6 +24,8 @@
 
     console.log('2 Adding "Pluto" to the end of the planets array.');
     planets.push("Pluto");
+    //Spread Method:
+    //planets = [...planets, "Pluto"]
     console.log(planets);
 
     console.log('3 Removing "The Sun" from the beginning of the planets array.');
@@ -35,8 +37,10 @@
     console.log(planets);
 
     console.log('5 Finding and logging the index of "Earth" in the planets array.');
-    let index= planets.indexOf("Earth");
-    console.log("The index of Earth is: " + index);
+    // let index= planets.indexOf("Earth");
+    // console.log("The index of Earth is: " + index);
+    console.log("Earth's index: " + planets.indexOf("Earth"));
+
     console.log("6 Reversing the order of the planets array.");
     planets.reverse();
     console.log(planets);
@@ -44,4 +48,5 @@
     console.log("7 Sorting the planets array.");
     planets.sort();
     console.log(planets);
+
 })();
