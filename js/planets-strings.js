@@ -30,8 +30,10 @@
     // console.log(planetWithBreakTags);
 
     let planetsList = planetsArray.join("</li><li>")
-    //document.getElementsByTagName('body')[0].innerHTML += planetsList
     //REFACTOR:
     // let planetsList = "<ul><li>" + planets.Array.join("<li></li>" + "</li></ul>");
+    //THE DOCUMENT METHOD:
+    //document.getElementsByTagName('body')[0].innerHTML += planetsList
+
     console.log(planetsList = "<ul><li>" + planetsList + "</li></ul>");
 })();
