@@ -26,4 +26,12 @@
      */
     planetsString = planetsArray.join("<br>");
     console.log(planetsString);
+    // const planetWithBreakTags = planetsArray.join("<br>");
+    // console.log(planetWithBreakTags);
+
+    let planetsList = planetsArray.join("</li><li>")
+    //document.getElementsByTagName('body')[0].innerHTML += planetsList
+    //REFACTOR:
+    // let planetsList = "<ul><li>" + planets.Array.join("<li></li>" + "</li></ul>");
+    console.log(planetsList = "<ul><li>" + planetsList + "</li></ul>");
 })();
