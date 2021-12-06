@@ -202,13 +202,13 @@ let person = {
     books.createBook = function(title, authorFirstName, authorLastName) {
         this.push({ title: title, author: { firstName: authorFirstName, lastName: authorLastName} });
     }
-
+//REFACTOR:
     books.createBook("All Tomorrows: The Future Of Humanity", "C.M.", "Kösemen")
 
     let showBookInfo = function(index, book) {
         console.log(`Book # ${index + 1}\nTitle: ${book.title}\nAuthor: ${book.author.firstName} ${book.author.lastName}`);
     }
-
+//REFACTOR:
     books.forEach(function (book, index) {
         showBookInfo(index, book);
     });
