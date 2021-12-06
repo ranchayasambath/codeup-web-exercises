@@ -183,9 +183,9 @@ let person = {
     // });
 
     books.forEach(function(book,index){
-        console.log(`Book #: ${index +1} Title: ${book.title} 
-        Arthor: ${book.author.firstName} ${book.author.lastName}`)
-    })
+        console.log(`Book #: ${index +1}\nTitle: ${book.title}\nArthor: ${book.author.firstName}\n${book.author.lastName}
+        ${"---"}`)
+    });
 
 
 
@@ -203,7 +203,7 @@ let person = {
         this.push({ title: title, author: { firstName: authorFirstName, lastName: authorLastName} });
     }
 
-    books.createBook('Book6', 'Author6First', 'Author6First')
+    books.createBook("All Tomorrows: The Future Of Humanity", "C.M.", "Kösemen")
 
     let showBookInfo = function(index, book) {
         console.log(`Book # ${index + 1}\nTitle: ${book.title}\nAuthor: ${book.author.firstName} ${book.author.lastName}`);
