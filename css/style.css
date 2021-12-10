@@ -16,7 +16,8 @@ body {
     background-repeat:no-repeat;
     background-position: top right;
     background-size: 300px;
-    /*change style font to entire page*/
+    /*change style font to entire page &
+     background color*/
     font-family: "Comic Sans MS";
     background-color: lightgray;
 }
@@ -28,6 +29,8 @@ ul li{
 /*add table style*/
 table, th, td{
     border: 2px solid black;
+    padding: 4px;
+    font-size: 50px;
 }
 /*change style anchor tags*/
 a:hover{
