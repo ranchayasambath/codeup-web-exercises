@@ -1,5 +1,41 @@
+/*center main heading*/
+h1{
+    text-align: center
+}
 .fancy-header{
     /*color: red;*/
-    color: purple;
+    /*color: purple;*/
+/*add a style to change color and make underline*/
+    color:orange;
     text-decoration: underline;
+}
+/*add style to change background of page*/
+body {
+    /*add style to add background imag*/
+    background-image: url("img/rain.png");
+    /*change style font to entire page*/
+    font-family: "Comic Sans MS";
+    background-color: lightgray;
+}
+/*add style to list style*/
+ul li{
+    list-style-type: square;
+}
+/*add table style*/
+table, th, td{
+    border: 2px solid black;
+}
+/*change style anchor tags*/
+a:hover{
+    background-color:white;
+    color:deepskyblue;
+}
+a:visited{
+    color:tomato;
+}
+a:link{
+    color:black;
+}
+a:active{
+    color:lightgreen;
 }
