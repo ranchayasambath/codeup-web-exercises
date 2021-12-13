@@ -12,40 +12,39 @@ body, html {
 #mInfo {
     color: #3a0ca3;
     background:#bfd7ff;
-    max-width: 45%;
-    margin: 6px auto;
+    max-width: 39%;
+    margin: 7px auto;
     border:  0.5px solid lightgray;
     border-radius: var(--moz-border-radius);
-    padding: 8px;
-    font-size: medium;
+    padding: 9px;
 }
 
 #mSuccess{
     color: #2D6A4F;
     background: #b7e4c7;
-    max-width: 45%;
-    margin: 6px auto;
+    max-width: 39%;
+    margin: 7px auto;
     border: 0.5px solid lightgray;
     border-radius: var(--moz-border-radius);
-    padding: 8px;
+    padding: 9px;
 }
 
 #mWarning{
     color: #b69121;
     background: #FFF7D6;
-    max-width: 45%;
-    margin: 6px auto;
+    max-width: 39%;
+    margin: 7px auto;
     border: 0.5px solid lightgray;
     border-radius:var(--moz-border-radius);
-    padding: 8px;
+    padding: 9px;
 }
 
 #mError{
     color: #6a040f;
     background: #FFC2CD;
-    max-width: 45%;
-    margin: 6px auto;
+    max-width: 39%;
+    margin: 7px auto;
     border: 0.5px solid lightgray;
     border-radius:var(--moz-border-radius);
-    padding: 8px;
+    padding: 9px;
 }
