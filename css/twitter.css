@@ -78,7 +78,7 @@ a {
 }
 .profile-image{
     position: absolute;
-    top: 190px;
+    top: 205px;
 }
 .profile-form{
     line-height: 80px;
@@ -111,7 +111,7 @@ calc to subtract the margin to the percents of the width property.*/
     overflow: auto;
 }
 .media-image{
-    float:left;
+    float: left;
     max-width: 50px;
     margin-top: 1.33em;
 }
