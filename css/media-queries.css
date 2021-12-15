@@ -1,0 +1,26 @@
+@media screen and (min-width:500px){
+    body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    li {
+        justify-content: flex-end;
+        padding: 1em;
+        margin: 1em;
+        background-color: lightgray;
+        list-style-type: none;
+    }
+    .alert-info {
+        padding: 1em;
+        background-color: lightblue;
+        border: solid 2px gray;
+    }
+    #social-media-links{
+        display: inline-block;
+    }
+}
