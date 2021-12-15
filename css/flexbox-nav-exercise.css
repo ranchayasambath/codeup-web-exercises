@@ -1,29 +1,89 @@
 * {
     box-sizing: border-box;
 }
-.link{
+.navBox {
     display:flex;
     background-color: #ADADAD;
     align-items: center;
+    border-radius:20px;
     /*height: 5em;*/
 }
 .logo {
-    margin: auto;/* space out "logo" */
+    margin: auto;/*space out "logo"*/
     font-size: 3em;
     padding:.2em 0;
     font-family: "Montserrat",sans-serif;
 }
-a{
+a {
     display: inline-block;
     padding: 0 1em; /*spacing between links*/
     color: black;
     font-family: "Work Sans",sans-serif;
+    font-weight: bolder;
 }
-a:hover{
+a:hover {
     color: blue;
 }
-body *{
+body * {
     text-decoration: none;
-    /* remove style from body */
+    /*remove style from body*/
+}
+/*-----------------------Bonus----------------------------*/
+body {
+    background-color: black;
+}
+.padding {
+    padding:19em;
+}
+.footerBox {
+    display:flex;
+    background-color: #ADADAD;
+    align-items: center;
+    border-radius:20px;
+}
+.footerLogo {
+    margin: auto; /*space out "logo"*/
+    font-size: 4em;
+    padding: .2em 0;
+    font-family: "Montserrat", sans-serif;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5em;
+}
+form * {
+    background-color: gray;
+    margin:.09em;
+    border: 0;
+}
+*::placeholder {
+    color: white;
+}
+.submitButton{
+    background: darkorange;
+    padding: 1em;
+    border-radius: 20px;
+}
+.name {
+    padding: .5em;
+    border-radius: 20px;
+}
+.email {
+    padding: .3em;
+    border-radius: 20px;
+}
+.phone {
+    padding: .3em;
+    border-radius: 20px;
+}
+.comment{
+    padding: .3em;
+    border-radius: 20px;
+}
+.submitButton:hover{
+    background-color: black;
+    color: white;
+}
