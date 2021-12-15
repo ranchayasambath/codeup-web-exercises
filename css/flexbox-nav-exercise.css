@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+.link{
+    display:flex;
+    background-color: #ADADAD;
+    align-items: center;
+    /*height: 5em;*/
+}
+.logo {
+    margin: auto;/* space out "logo" */
+    font-size: 3em;
+    padding:.2em 0;
+    font-family: "Montserrat",sans-serif;
+}
+a{
+    display: inline-block;
+    padding: 0 1em; /*spacing between links*/
+    color: black;
+    font-family: "Work Sans",sans-serif;
+}
+a:hover{
+    color: blue;
+}
+body *{
+    text-decoration: none;
+    /* remove style from body */
+}
+
