@@ -33,7 +33,7 @@ body {
     background-color: black;
 }
 .padding {
-    padding:19em;
+    padding:21.5em;
 }
 .footerBox {
     display:flex;
@@ -43,7 +43,7 @@ body {
 }
 .footerLogo {
     margin: auto; /*space out "logo"*/
-    font-size: 4em;
+    font-size: 3em;
     padding: .2em 0;
     font-family: "Montserrat", sans-serif;
 }
