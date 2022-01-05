@@ -39,31 +39,31 @@
         </nav>
     </div>
 </nav>
-<div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid">
             <h1 class="display-4">Welcome to Pizza World!</h1>
-</div>
+    </div>
 <div>
     <h2>
         Build your own pizza!
     </h2>
 </div>
 <!--Nav-tabs-->
-<ul class="nav nav-tabs" role="tab">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#size-and-crust" role="tab" aria-controls="size-and-crust" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
+        <a class="nav-link active" id="SizeAndCrust-tab" data-toggle="tab" href="#size-and-crust" role="tab" aria-controls="size-and-crust" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
     </li>
     <li class="nav-item" role="presentation">
-        <a class="nav-link" id="cheese-and-sauce" data-toggle="tab" href="#cheese-and-sauce" role="tab" aria-controls="cheese-and-sauce" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span> Cheese and Sauce</a>
+        <a class="nav-link" id="CheeseAndSauce-tab" data-toggle="tab" href="#cheese-and-sauce" role="tab" aria-controls="cheese-and-sauce" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span> Cheese and Sauce</a>
     </li>
     <li class="nav-item" role="presentation">
-        <a class="nav-link" id="toppings" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+        <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
     </li>
 </ul>
 <!--Nav-tabs End-->
 
 <!--NavCard SizeAndCrust-->
-<div>
-    <div class="card tab-pane fade show active" role="tab">
+<div class="tab-content">
+    <div class="card tab-pane fade show active" id="size-and-crust" role="tabpanel" aria-labelledby="SizeAndCrust-tab">
         <div class="card-header bg-primary text-white">Choose size and crust</div>
         <div class="card-body">
             <div class="card">
@@ -87,8 +87,84 @@
         <div class="card-footer text-right">
             <a href="#" class="btn btn-primary" role="button">Next step ></a>
         </div>
+    </div>
 <!--NavCard SizeAndCrust End-->
 
+<!--NavCard CheeseAndSauce-->
+    <div class="card tab-pane fade" id="cheese-and-sauce" role="tabpanel" aria-labelledby="CheeseAndSauce-tab">
+        <div class="card-header bg-primary text-white">Choose cheese and sauce</div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">Cheese</div>
+                <div class="card-body form-group">
+                    <label for="CheeseSelection">How much?</label>
+                    <select class="form-control" id="CheeseSelection">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                        <option>Double</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">Sauce</div>
+                <div class="card-body form-group">
+                    <label for="SauceSelection">What Type?</label>
+                    <select class="form-control" id="SauceSelection">
+                        <option>Tomato sauce</option>
+                        <option>Marinara sauce</option>
+                        <option>BBQ sauce</option>
+                        <option>Alfredo sauce</option>
+                    </select>
+                    <br>
+                    <label for="SauceAmount">How Much?</label>
+                    <select class="form-control" id="SauceAmount">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-right">
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary" role="button">< Previous step</a>
+                <a href="#" class="btn btn-primary" role="button">Next step ></a>
+            </div>
+        </div>
+    </div>
+<!--  NavCard CheeseAndSauce End-->
+<!--  NavCard Toppings-->
+        <div class="card tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
+            <div class="card-header bg-primary text-white">Choose toppings</div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">Choose Meats</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><input type="radio"> Beef</li>
+                        <li class="list-group-item"><input type="radio"> Ham</li>
+                        <li class="list-group-item"><input type="radio"> Philly Steak</li>
+                        <li class="list-group-item"><input type="radio"> Bacon</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">Choose non-meats</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><input type="radio"> Green Peppers</li>
+                        <li class="list-group-item"><input type="radio"> Mushrooms</li>
+                        <li class="list-group-item"><input type="radio"> Onions</li>
+                        <li class="list-group-item"><input type="radio"> Jalapeños Peppers</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer text-right">
+                <a href="#" class="btn btn-primary" role="button">Checkout<span class="iconify" data-icon="clarity:shopping-cart-solid"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
