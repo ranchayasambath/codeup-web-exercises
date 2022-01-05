@@ -1,11 +1,11 @@
-@media screen and (min-width: 300px){
-    footer{
+@media screen and (min-width: 300px) {
+
+    footer {
         display: flex;
     }
-    footer h4 ul{
+    footer ul li {
+        margin-top: 5px;
         list-style-type: none;
-    }
-    footer>h4>ul>li>a{
-        flex-direction: column;
+        font-size: 2em;
     }
 }
