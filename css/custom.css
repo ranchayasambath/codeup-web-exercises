@@ -1,8 +1,8 @@
 .jumbotron {
-    background-image: url("../img/pizza.png");
+    /*background-image:url("../img/pizza.png");*/
 }
 
-h1{
+.jumbotron h1{
     opacity: 50%;
     background-color:#F5F5F5;
     text-align:center;
