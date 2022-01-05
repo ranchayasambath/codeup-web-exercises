@@ -47,8 +47,8 @@
         Build your own pizza!
     </h2>
 </div>
-<!--Navtabs-->
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<!--Nav-tabs-->
+<ul class="nav nav-tabs" role="tab">
     <li class="nav-item" role="presentation">
         <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#size-and-crust" role="tab" aria-controls="size-and-crust" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
     </li>
@@ -59,11 +59,11 @@
         <a class="nav-link" id="toppings" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
     </li>
 </ul>
-<!--Navtabs End-->
+<!--Nav-tabs End-->
 
-<!--NavCards-->
+<!--NavCard SizeAndCrust-->
 <div>
-    <div class="card tab-pane fade show active" id="size-and-crust" role="tab">
+    <div class="card tab-pane fade show active" role="tab">
         <div class="card-header bg-primary text-white">Choose size and crust</div>
         <div class="card-body">
             <div class="card">
@@ -75,16 +75,19 @@
                 </ul>
             </div>
             <br>
-            <ul class="list-group">
-                <li class="list-group-item bg-light">Crispy Thin</li>
-                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
-                <li class="list-group-item"><input type="radio" name="selection-2"> Medium (12")</li>
-                <li class="list-group-item"><input type="radio" name="selection-2"> Large (14")</li>
-            </ul>
+            <div class="card">
+                <div class="card-header">Crispy Thin</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
+                    <li class="list-group-item"><input type="radio" name="selection-2" > Medium (12")</li>
+                    <li class="list-group-item"><input type="radio" name="selection-2"> Large (14")</li>
+                </ul>
+            </div>
         </div>
         <div class="card-footer text-right">
             <a href="#" class="btn btn-primary" role="button">Next step ></a>
         </div>
+<!--NavCard SizeAndCrust End-->
 
 <!-- Optional JavaScript; choose one of the two! -->
 
