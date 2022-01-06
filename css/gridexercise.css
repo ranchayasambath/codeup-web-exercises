@@ -1,0 +1,15 @@
+.container {
+    border: 3px solid black;
+}
+.row{
+    border: 3px solid black;
+    background-color: #bd3e00;
+}
+.col-lg {
+     border: 3px solid black;
+
+}
+* {
+    text-align: center;
+    color: white;
+}
