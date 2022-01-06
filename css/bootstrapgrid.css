@@ -1,0 +1,34 @@
+*{
+    font-family: Helvetica;
+}
+h3 {
+    color: dodgerblue;
+}
+h1{
+    text-align: center;
+    margin: .5em 0 .5em 0;
+    font-weight: bold;
+}
+#topP{
+    text-align: center;
+}
+#job{
+    text-align: center;
+    color: black;
+}
+hr{
+    border: 5px solid green;
+}
+
+#contacts{
+    text-align: center;
+}
+#skills{
+    text-align: left;
+}
+#academic{
+    text-align: left;
+}
+#experience{
+    text-align: left;
+}
