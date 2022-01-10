@@ -1,0 +1,261 @@
+/*DEFAULT STRUCTURE*/
+body{
+    background-color: #E6E6E6;
+    font-size: 1em;
+}
+/*WHITE BACKGROUND LOGO*/
+.line-background{
+    height: 5em;
+    background-color: #F0F0F0;
+    margin-top: 2em;}
+.left-nav{
+    top: 1em;
+    margin-right: 5em;
+}
+
+.right-nav {
+    display: flex;
+    justify-content:space-evenly;
+    top: 1.5em;
+}
+
+/*HIDE NAV LINKS WHEN ENLARGED*/
+.hideme *{
+    display: none;
+}
+.small-links *{
+    display: none;}
+/*--------------------------*/
+
+/*LOGO SIZE*/
+.logo-size>img{
+    height: 10em;}
+
+/*LOGO CONTAINER AND NAV*/
+.container{
+    position: fixed;
+    margin: 0;
+    top: 0;
+}
+
+.logo-size {
+    text-align: center;
+}
+
+.hide-codeup{
+    display: none;
+
+}
+/*TURN OFF STYLING FOR NAV LINKS*/
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.from-park-city *{
+    margin-top: 1em;
+    text-align: center;
+}
+/*FOUR CIRCLES*/
+.circle {
+    border-radius: 50%;
+    background-color: red;
+    border: .5em white solid;
+    height: 9em;
+    width: 9em;
+    margin-bottom: .5em;
+}
+/*CIRCLE COLORS*/
+
+#red{
+    background-color: #e6563b;
+}
+#orange{
+    background-color: #eb9d3a;
+
+}
+#green{
+    background-color: #7cb06c;
+}
+#teal{
+    background-color: #00aba9;
+}
+/*-------------------*/
+.from-park-city{
+    margin-bottom: 2em;
+}
+
+.circle-holder{
+    display: flex;
+    justify-content: center;
+}
+.visual-design{
+    text-align: center;
+}
+.selected-work{
+    margin: 5em 0 1.5em 0;
+    text-align: center;
+}
+.apple-ipad {
+
+    text-align: center;
+}
+/*VERY SMALL SCREEN TRANSITION*/
+@media screen and (max-width:576px){
+    .show-large{display: none}
+
+    .hideme *{
+        display: flex;
+    }
+    .very-small-links{
+        justify-content: space-evenly;
+        margin: 1em 0 1em 0;
+    }
+    .hide-codeup{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-nav *{
+        display: none;
+    }
+    .visual-design{
+        text-align: center;
+    }
+    .apple-ipad img {
+        width: 350px;
+        height: 200px ;
+    }
+    .featured-project{
+        margin-top: 1.5em;
+    }
+    .circle-2 {
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        margin-top: 1.5em;
+        margin-left: 1em;
+}
+
+}
+/*SMALL SCREEN TRANSITION*/
+@media screen and (min-width: 577px) and (max-width:800px ) {
+    .hide-on-large{display: revert}
+    .show-large{display: none}
+    .small-links {
+        position: fixed;
+        top: 3.5em;
+        width: 100%;
+    }
+
+    .small-links * {
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .middle-container {
+        margin-left: 2em;
+    }
+
+    .hide-codeup{
+        display: revert;
+        margin-left: 1.7em;
+
+    }
+    #codeup-holder{
+        display: flex;
+        justify-content: center;
+
+    }
+    .main-nav *{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!*Global styling*!*/
+
+/*body {*/
+/*    background-color: #E6E6E6;*/
+/*}*/
+
+/*h1, h2, h3, h4, h5, h6 {*/
+/*    font-family: 'Abel', sans-serif;*/
+/*    text-align: center*/
+/*}*/
+
+/*p {*/
+/*    font-family: 'Anton', sans-serif;*/
+/*}*/
+/*.circle{*/
+/*    width: 85px;*/
+/*    height: 85px;*/
+/*    border: solid white 3px ;*/
+/*    border-radius: 50%;*/
+/*    text-align: center;*/
+/*}*/
+/*#red{*/
+/*    background-color: #E6563B;*/
+/*}*/
+/*#orange{*/
+/*    background-color: #EB9D3A;*/
+/*}*/
+/*#green{*/
+/*    background-color: #7cb06C;*/
+/*}*/
+/*#blue{*/
+/*    background-color: #00ABA9;*/
+/*}*/
+
+/*@media screen and (min-width: 760px) {*/
+/*    .thumbnails-lg {*/
+/*        height: 150px;*/
+/*        width: 200px;*/
+/*    }*/
+/*}*/
+
+/*!*viewport small query*!*/
+/*@media screen and (max-width:576px){*/
+/* #logo-background{*/
+/* background-color: white;*/
+/* }*/
+/*}*/
