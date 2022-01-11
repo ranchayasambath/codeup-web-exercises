@@ -3,6 +3,13 @@ body{
     background-color: #E6E6E6;
     font-size: 1em;
 }
+p {
+    font-family: 'Abel', sans-serif;
+    text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton', sans-serif;
+}
 /*WHITE BACKGROUND LOGO*/
 .line-background{
     height: 5em;
@@ -31,12 +38,6 @@ body{
 .logo-size>img{
     height: 10em;}
 
-/*LOGO CONTAINER AND NAV*/
-.container{
-    position: fixed;
-    margin: 0;
-    top: 0;
-}
 
 .logo-size {
     text-align: center;
@@ -62,7 +63,7 @@ a, a:hover, a:focus, a:active {
     border: .5em white solid;
     height: 9em;
     width: 9em;
-    margin-bottom: .5em;
+    margin:0 0 .5em 0;
 }
 /*CIRCLE COLORS*/
 
@@ -85,7 +86,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .circle-holder{
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
 }
 .visual-design{
@@ -95,12 +96,23 @@ a, a:hover, a:focus, a:active {
     margin: 5em 0 1.5em 0;
     text-align: center;
 }
-.apple-ipad {
-
-    text-align: center;
+#hide-all-small {
+    display: none;
+}
+#hide-main-nav{
+    display: none;
+}
+.selected-work{
+    display: none;
 }
 /*VERY SMALL SCREEN TRANSITION*/
-@media screen and (max-width:576px){
+@media screen and (max-width:425px){
+
+    .container{
+        position: fixed;
+        margin: 0;
+        top: 0;
+    }
     .show-large{display: none}
 
     .hideme *{
@@ -115,13 +127,15 @@ a, a:hover, a:focus, a:active {
         justify-content: center;
     }
 
-    .main-nav *{
+    .main-nav *, .large-screen{
         display: none;
     }
-    .visual-design{
+    .visual-design,.from-park-city{
+        font-family: anton;
         text-align: center;
     }
     .apple-ipad img {
+        display: revert;
         width: 350px;
         height: 200px ;
     }
@@ -135,10 +149,26 @@ a, a:hover, a:focus, a:active {
         margin-top: 1.5em;
         margin-left: 1em;
 }
-
+    #hide-all-small {
+        display: revert;
+    }
+    .selected-work{
+        display: revert;
+    }
 }
 /*SMALL SCREEN TRANSITION*/
-@media screen and (min-width: 577px) and (max-width:800px ) {
+@media screen and (min-width: 768px) and (max-width:800px ) {
+    .separator {
+        border-bottom: 1px solid #bebebe;
+        width: 90%;
+    }
+
+    .container {
+        position: fixed;
+        margin: 0;
+        top: 0;
+    }
+
     .hide-on-large{display: revert}
     .show-large{display: none}
     .small-links {
@@ -157,18 +187,114 @@ a, a:hover, a:focus, a:active {
         margin-left: 2em;
     }
 
-    .hide-codeup{
+    .hide-codeup {
         display: revert;
-        margin-left: 1.7em;
-
+        margin-bottom: 2em;
     }
-    #codeup-holder{
+
+    #codeup-holder {
         display: flex;
         justify-content: center;
 
     }
-    .main-nav *{
+
+    .main-nav *, .large-screen{
         display: none;
+    }
+
+    #hide-all-small {
+        display: revert;
+    }
+
+    .featured-project {
+        display: none;
+    }
+
+    .circle-2 {
+        display: none;
+    }
+
+    .image-left {
+        margin:0 1em 0 1em;
+    }
+    .image-right {
+        margin: 0 1em 0 1em;
+
+    }
+    .circle-3-holder {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .circle-3 {
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        margin-top: 1.5em;
+        margin-left: .5em;
+
+    }
+}
+/* Large Screen Viewport */
+@media screen and (min-width: 992px){
+    .container {
+        width: 80%;
+    }
+    .navbar {
+        background-color: #F0F0F0;
+        height: 65px;
+    }
+    #small-nav,#nav-top {
+        display: none;
+    }
+    .logo-size {
+        height: 105px;
+        width: 105px;
+        margin-right: 0.5em;
+    }
+    .brand {
+        font-size: 24px;
+        margin: auto;
+    }
+    h3 {
+        font-weight: bolder;
+        font-size: 64px;
+        margin-bottom: 32px;
+    }
+    h6 {
+        /*font-weight: bolder;*/
+    }
+    .badges {
+        margin: auto;
+    }
+    .circle-holder {
+        padding: 0 0 0 2em;
+        width: 80%;
+    }
+    .circle-row {
+        margin: auto;
+    }
+    hr.separator {
+        border-bottom: 1px solid #bebebe;
+        width: 90%;
+    }
+    #last-container {
+        width: 80%;
+    }
+    .thumbnails-lg {
+        border: 2.5px solid #bebebe;
+        height: 140px;
+        width: 230px;
+        margin-bottom: 1em;
+    }
+    .thumbnail-sm {
+        border: 0.5px solid #bebebe;
+        height: 50px;
+        width: 50px;
+    }
+    .tweet {
+        padding-left: 10px;
+        margin: 0.50em 0 0;
     }
 }
 
@@ -209,53 +335,3 @@ a, a:hover, a:focus, a:active {
 
 
 
-
-
-
-/*!*Global styling*!*/
-
-/*body {*/
-/*    background-color: #E6E6E6;*/
-/*}*/
-
-/*h1, h2, h3, h4, h5, h6 {*/
-/*    font-family: 'Abel', sans-serif;*/
-/*    text-align: center*/
-/*}*/
-
-/*p {*/
-/*    font-family: 'Anton', sans-serif;*/
-/*}*/
-/*.circle{*/
-/*    width: 85px;*/
-/*    height: 85px;*/
-/*    border: solid white 3px ;*/
-/*    border-radius: 50%;*/
-/*    text-align: center;*/
-/*}*/
-/*#red{*/
-/*    background-color: #E6563B;*/
-/*}*/
-/*#orange{*/
-/*    background-color: #EB9D3A;*/
-/*}*/
-/*#green{*/
-/*    background-color: #7cb06C;*/
-/*}*/
-/*#blue{*/
-/*    background-color: #00ABA9;*/
-/*}*/
-
-/*@media screen and (min-width: 760px) {*/
-/*    .thumbnails-lg {*/
-/*        height: 150px;*/
-/*        width: 200px;*/
-/*    }*/
-/*}*/
-
-/*!*viewport small query*!*/
-/*@media screen and (max-width:576px){*/
-/* #logo-background{*/
-/* background-color: white;*/
-/* }*/
-/*}*/

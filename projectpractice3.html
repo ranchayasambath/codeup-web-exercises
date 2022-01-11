@@ -23,24 +23,24 @@
 <body>
 
 <!-- WHITE BACKGROUND FOR DESIGN LOGO-->
-    <div class="line-background">
+    <div id="small-nav" class="line-background"></div>
     <!--    LARGE VIEW NAV STRUCTURE-->
-        <div class="row main-nav">
-            <div class="col-xl-4 col-lg-4 left-nav d-flex justify-content-center">
-                <div class="main-codeup-design">
-                    <h2>codeup design</h2>
-                </div>
-            </div>
+<!--        <div class="row main-nav"  id="hide-main-nav">-->
+<!--            <div class="col-xl-4 col-lg-4 left-nav d-flex justify-content-center">-->
+<!--                <div class="main-codeup-design">-->
+<!--                    <h2>codeup design</h2>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <div class="col-xl-7 col-lg-4 right-nav">
-                <a href="#"><p>SERVICES</p></a>
-                <a href="#"><p>WORK</p></a>
-                <a href="#"><p>BLOG</p></a>
-                <a href="#"><p>CONTACT</p></a>
-            </div>
-        </div>
-    </div>
-
+<!--            <div class="col-xl-7 col-lg-4 right-nav">-->
+<!--                <a href="#"><p>SERVICES</p></a>-->
+<!--                <a href="#"><p>WORK</p></a>-->
+<!--                <a href="#"><p>BLOG</p></a>-->
+<!--                <a href="#"><p>CONTACT</p></a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--^^^^^^CHANGE THIS WHOLE THING NAV ABOVE AND USE THE STRUCTURE ON HOW TO FLOAT ICON ^^^^^^^ -->
     <!-- NAV LINKS BEHIND LOGO-->
     <div class="small-links row d-flex justify-content-between">
         <div class="col-sm-5">
@@ -55,7 +55,8 @@
     </div>
 
     <!--MAIN CONTAINER -->
-    <div class="container" id="hide-all">
+
+    <div class="container" id="hide-all-small">
         <div class="row middle-container">
             <div class="col-lg-1">
             </div>
@@ -64,14 +65,14 @@
                     <img src="/assets/images/logo.png" alt="logo-design">
                 </div>
             </div>
-    <!--        <div class="col-lg-10"></div>-->
 
             <div class="col-12 hide-codeup">
                 <div id="codeup-holder">
-                    <h1>codeup design</h1>
+                    <h4>codeup design</h4>
                 </div>
             </div>
     <!--SMALL VIEW NAV STRUCTURE-->
+
             <div class="col-12 hideme">
                 <div class="very-small-links ">
                 <a href="#"><p>SERVICES</p></a>
@@ -90,7 +91,7 @@
             <div class="col-12 from-park-city ">
                 <h5> FROM PARK CITY, UTAH</h5>
             </div>
-    <!--        <div class="col-12 circle-holder d-flex">-->
+
             <div class="col-6 col-sm-3 circle-holder">
                 <div class="circle" id="red">
                     <p style="margin: 3.2em 2.1em; color: white;font-weight: bolder">DESIGN</p>
@@ -117,10 +118,14 @@
                     </p>
                 </div>
             </div>
+
+
+<!--            VERY SMALL SCREEN LOWER SECTION-->
+
             <div class="col-12 selected-work">
                 <h6>SELECTED WORK</h6>
             </div>
-            <div class="col-12 apple-ipad">
+            <div class="col-12 apple-ipad d-block d-sm-none">
                 <img src="assets/images/apple-ipad.jpg" height="426" width="640"/>
             </div>
             <div class="col-7 featured-project">
@@ -133,13 +138,268 @@
                 <p style="font-size: .8em;margin:0 .4em ;  font-weight: bolder">D</p>
             </div>
             <div class="circle-2" style="background-color:#7cb06c">
-                <p style="font-size: .8em;margin:0 .3em ;  font-weight: bolder">S</p>
+                <p style="font-size: .8em;margin:0 .4em 1em  ;  font-weight: bolder">S</p>
             </div>
             <div class="circle-2" style="background-color:#00aba9">
-                <p style=" font-size: .8em; margin:0 .3em ;  font-weight: bolder">H</p>
+                <p style=" font-size: .8em; margin:0 .31em ;  font-weight: bolder">H</p>
+            </div>
+
+            <!--            LINE SEPARATOR-->
+            <hr class="separator">
+
+            <!--        TABLET VIEW LOWER SECTION-->
+            <div class="col-12" >
+                <div class="d-none d-sm-block" style="text-align: center; margin: 2em 0 2em">
+                    <h6>SELECTED WORK</h6>
+                </div>
+            </div>
+
+
+
+
+    <!--        LEFT-TOP IMAGE LOWER SECTION-->
+
+            <div class="col-6 d-none d-sm-block">
+                <div class="image-left">
+                    <img src="assets/images/apple-ipad.jpg" height="200px" width="300px"/>
+                    <div class="col-sm-6 circle-3-holder">
+                        <p style="font-size: 15px">FEATURED PROJECT</p>
+                        <div class="circle-3" style="background-color:#e6563b">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bold">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#eb9d3a">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bolder">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#7cb06c">
+                            <p style="font-size: .8em;margin:0 .4em 1em  ;  font-weight: bolder">S</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#00aba9">
+                            <p style=" font-size: .8em; margin:0 .31em ;  font-weight: bolder">H</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--            RIGHT-TOP IMAGE LOWER SECTION-->
+
+            <div class="col-6 d-none d-sm-block">
+                <div class="image-right">
+                    <img src="assets/images/macbook.jpg" height="200px" width="300px"/>
+                    <div class="col-sm-4 circle-3-holder">
+                        <p style="font-size: 15px">FEATURED PROJECT</p>
+                        <div class="circle-3" style="background-color:#e6563b">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bold">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#eb9d3a">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bolder">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#7cb06c">
+                            <p style="font-size: .8em;margin:0 .4em 1em  ;  font-weight: bolder">S</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#00aba9">
+                            <p style=" font-size: .8em; margin:0 .31em ;  font-weight: bolder">H</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--        LEFT-BOTTOM IMAGE LOWER SECTION-->
+            <div class="col-6 d-none d-sm-block">
+                <div class="image-left">
+                    <img src="assets/images/man.jpg" height="200px" width="300px"/>
+                    <div class="col-sm-4 circle-3-holder">
+                        <p style="font-size: 15px">FEATURED PROJECT</p>
+                        <div class="circle-3" style="background-color:#e6563b">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bold">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#eb9d3a">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bolder">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#7cb06c">
+                            <p style="font-size: .8em;margin:0 .4em 1em  ;  font-weight: bolder">S</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#00aba9">
+                            <p style=" font-size: .8em; margin:0 .31em ;  font-weight: bolder">H</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--                RIGHT-BOTTOM IMAGE LOWER SECTION-->
+            <div class="col-6 d-none d-sm-block">
+                <div class="image-right">
+                    <img src="assets/images/security.jpg" height="200px" width="300px"/>
+                    <div class="col-sm-6 circle-3-holder ">
+                        <p style="font-size: 15px">FEATURED PROJECT</p>
+                        <div class="circle-3" style="background-color:#e6563b">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bold">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#eb9d3a">
+                            <p style="font-size: .8em;margin:0 .4em ;  font-weight: bolder">D</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#7cb06c">
+                            <p style="font-size: .8em;margin:0 .4em 1em  ;  font-weight: bolder">S</p>
+                        </div>
+                        <div class="circle-3" style="background-color:#00aba9">
+                            <p style=" font-size: .8em; margin:0 .31em ;  font-weight: bolder">H</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+        <!-- LARGE VIEWPORT SECTION-->
+        <div class="large-screen">
+
+            <!-- NAVBAR -->
+            <nav id="large-navbar" class="navbar navbar-expand-lg mt-5 mb-1">
+                <div class="container">
+                    <!--        Logo-->
+                    <img class="logo-size" src="assets/images/logo.png" alt="logo-image"/>
+
+                    <!--        Brand-->
+                    <p class="brand" ">Codeup Design</p>
+                    <div class="collapse navbar-collapse disabled" id="navbarNav">
+                    </div>
+
+                    <!--        Links-->
+                    <div class="row text-center">
+                        <div class="col-lg-3">
+                            <a class="nav-link" href="#">SERVICES <span class="sr-only">(current)</span></a>
+                        </div>
+                        <div class="col-lg-3">
+                            <a class="nav-link" href="#">WORK</a>
+                        </div>
+                        <div class="col-lg-3">
+                            <a class="nav-link" href="#">BLOG</a>
+                        </div>
+                        <div class="col-lg-3">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- MIDDLE SECTION -->
+            <div class="container text-center d-flex mt-5">
+                <div class="row">
+                    <div class="col-12 mb-2">
+                        <h3>
+                            Web Development & Design
+                        </h3>
+                    </div>
+                    <div class="col-12 mb-5">
+                        <h3>
+                            From Park City, Utah
+                        </h3>
+                    </div>
+
+                    <!--  Badges  -->
+                    <div class="container d-flex text-center badges">
+                        <div class="row circle-row">
+                            <div class="col-3 circle-holder">
+                                <div class="circle" id="red">
+                                    <p style="margin: 3.2em 2.1em; color: white;font-weight: bolder">DESIGN</p>
+                                </div>
+                            </div>
+                            <div class="col-3 circle-holder">
+                                <div class="circle" id="orange">
+                                    <p style="margin: 3.2em 1.8em; color: white;font-weight: bolder">
+                                        DEVELOP
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 circle-holder">
+                                <div class="circle" id="green">
+                                    <p style="margin: 3.2em 1.8em; color: white;font-weight: bolder">
+                                        SUPPORT
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 circle-holder">
+                                <div class="circle" id="teal">
+                                    <p style="margin: 3.2em 2.7em; color: white ; font-weight: bolder">
+                                        HOST
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Badges End-->
+                </div> <!-- Container Row End-->
+            </div> <!-- MIDDLE SECTION CONTAINER END-->
+
+            <!-- HORIZONTAL ROW -->
+            <div class="container mt-5 mb-5">
+                <hr class="separator">
+            </div>
+
+            <!-- BOTTOM SECTION  -->
+            <div class="container d-flex p-5">
+
+                <div class="row">
+
+                    <!--    Selected Works-->
+                    <div class="col-7">
+                        <p>
+                            SELECTED WORKS
+                        </p>
+                        <div class="row">
+                            <!--  images-->
+                            <div class="col-6">
+                                <p><img class="thumbnails-lg" src="assets/images/apple-ipad.jpg" alt="apple-ipad"/></p>
+                            </div>
+                            <div class="col-6">
+                                <p><img class="thumbnails-lg" src="assets/images/macbook.jpg" alt="macbook-img"/></p>
+                            </div>
+                            <div class="col-6">
+                                <p><img class="thumbnails-lg" src="assets/images/security.jpg" alt="security"/></p>
+                            </div>
+                            <div class="col-6">
+                                <p><img class="thumbnails-lg" src="assets/images/man.jpg" alt="man-image"/></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--     The Last-->
+                    <div class="col-md-5">
+                        <p>
+                            THE LAST
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-2 mb-3">
+                                <img class="thumbnail-sm" src="assets/images/mobile-phone.jpg" alt="mobile-phone">
+                            </div>
+                            <div class="col-5">
+                                <h6>The admin bar and absolute positioning</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 mb-3">
+                                <img class="thumbnail-sm" src="assets/images/head.jpg" alt="3d-face">
+                            </div>
+                            <div class="col-4">
+                                <h6>Nibbler awesome website testing</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="thumbnail-sm" src="assets/images/ipad.jpg" alt="ipad-air">
+                            </div>
+                            <div class="col-4 mb-5">
+                                <h6>How to get Google to like you</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="thumbnail-sm" src="" alt="ipad-air"> <!-- twitter logo-->
+                            </div>
+                            <div class="col-4">
+                                <p>Last tweet</p>
+                            </div>
+                            <p class="tweet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum nam repellendus.</p>
+                        </div>
+                    </div>
+                </div> <!-- BOTTOM SECTION ROW END-->
+            </div> <!-- BOTTOM SECTION CONTAINER END-->
+
+        </div> <!--LARGE VIEWPORT END-->
 
 
 
@@ -169,7 +429,10 @@
 
 
 
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light mt-5" style="height: 50px;margin-bottom: 1em">-->
+
+
+
+        <!--<nav class="navbar navbar-expand-lg navbar-light bg-light mt-5" style="height: 50px;margin-bottom: 1em">-->
 <!--    <div class="container">-->
 <!--        <img src="assets/images/logo.png" style="height: 105px; width: 105px;" alt="logo-image"/>-->
 <!--        <a class="navbar-brand" href="#">Codeup Design</a>-->
