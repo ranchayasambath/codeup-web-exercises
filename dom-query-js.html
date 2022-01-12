@@ -41,6 +41,7 @@
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
         var listener = function () {
+
             mainHeader.innerHTML =  "JavaScript is Cool";
         }
         document.getElementById('btn1').addEventListener('click', listener);
@@ -52,6 +53,7 @@
         // TODO: Set the text color of subHeader to blue
         // subHeader.style.color  = "blue" ;
         var listener = function () {
+
             subHeader.setAttribute("style", "color: blue");
         }
         document.getElementById('btn2').addEventListener('click', listener);
@@ -63,7 +65,9 @@
         // TODO: Set text color on every other list item to grey
 
         var greyList= function() {
+
             for (var i = 0; i < listItems.length; i += 2) {
+
                 // listItems[i].style.color = "grey";
                 listItems[i].setAttribute("style", "color: grey")
             }
@@ -76,9 +80,14 @@
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-        var listOneBlue = function () { for (var i = 0; i < listItems.length; i++) {
+        var listOneBlue = function () {
+            for (var i = 0; i < listItems.length; i++) {
+
             var dbId = listItems[i].getAttribute("data-dbid");
+
             if (dbId === "1"){
+
+            // if (dbId == 1)
                 // listItems[i].style.color = "blue";
                 listItems[i].setAttribute("style","color: blue");
                 }
@@ -97,12 +106,16 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         // subParagraphs[0].innerHTML = "Mission Accomplished.";
 
-        var changeParagraph = function (){ for (var i = 0; i < subParagraphs.length; i++) {
+        var changeParagraph = function (){
+
+            for (var i = 0; i < subParagraphs.length; i++) {
+
             subParagraphs[i].innerHTML = "Mission Accomplished!"
             }
         }
 
         var listener = function () {
+
             changeParagraph();
         }
         document.getElementById('btn5').addEventListener('click', listener);
