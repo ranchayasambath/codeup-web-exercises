@@ -41,7 +41,8 @@
         var subHeader = document.getElementById("sub-header") ;
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color  = "blue" ;
+        // subHeader.style.color  = "blue" ;
+        subHeader.setAttribute("style", "color: blue")
 
         // TODO: Uncomment the next line and get all list items
 
@@ -50,15 +51,17 @@
         // TODO: Set text color on every other list item to grey
 
         for (let i = 0; i < listItems.length; i+=2) {
-            listItems[i].style.color = "grey";
+            // listItems[i].style.color = "grey";
+            listItems[i].setAttribute("style", "color: grey")
         }
 
         // TODO: Set text color of li with dbid = 1 to blue
 
         for (var i = 0; i < listItems.length; i++) {
             var dbId = listItems[i].getAttribute("data-dbid");
-            if (dbId == 1){
-                listItems[i].style.color = "blue";
+            if (dbId === "1"){
+                // listItems[i].style.color = "blue";
+                listItems[i].setAttribute("style","color: blue");
             }
         };
 
@@ -68,7 +71,7 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-        subParagraphs.innerHTML = "Mission Accomplished!"
+        subParagraphs[0].innerHTML = "Mission Accomplished!"
 
     })();
 </script>
