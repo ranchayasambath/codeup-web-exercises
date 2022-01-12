@@ -50,7 +50,7 @@
 
         // TODO: Set text color on every other list item to grey
 
-        for (let i = 0; i < listItems.length; i+=2) {
+        for (var i = 0; i < listItems.length; i+=2) {
             // listItems[i].style.color = "grey";
             listItems[i].setAttribute("style", "color: grey")
         }
@@ -70,8 +70,9 @@
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-
-        subParagraphs[0].innerHTML = "Mission Accomplished!"
+        for (var i = 0; i < subParagraphs.length; i++)
+        {
+            subParagraphs[i].innerHTML = "Mission Accomplished!"};
 
     })();
 </script>

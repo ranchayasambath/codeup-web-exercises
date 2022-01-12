@@ -9,6 +9,28 @@
 // retrievedSpan.textContent = promptAnswer;
 
 
+
+
+
+// var myElements = document.getElementsByClassName("odd");
+// console.log(myElements) // RETURNS ARRAY each element in the array is
+// // each of the elements it found with that class name
+//
+// myElements.innerHTML = "hello world";
+// // GOOGLE: getElementsByClassName -- MDN
+// // GOOGLE: getelementsByClassName contents not changing with innerHTML
+// // returns an array
+//
+// // LOOP THROUGH AN ARRAY TO CHANGE EACH ELEMENT RETURNED
+// for(var i = 0; i < myElements.length; i++){
+//     // access to each indiviudal element in the array (each element
+//     // with that class name)
+//     myElements[i].innerHTML = "hello world";
+// }
+
+
+
+
 //  var promptAnswer = prompt ( "hows the weather?");
 // var newParagraph = document.getElementById("sentence");
 // newParagraph.innerHTML = " The weather is " + promptAnswer;
