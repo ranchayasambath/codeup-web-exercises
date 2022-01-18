@@ -1,10 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = `<div class="coffee col-6" >`;
+    var html = `<div class="coffee col-6">`;
     html += '<p class="d-none">' + coffee.id + '</p>';
     html += '<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<p style="color: #999799; ">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -47,7 +47,7 @@ function updateCoffees(e) {
 
 var roastSelection = document.querySelector('#roast-selection');
 
-//Add Event Listener for when drop menue is changed then execute updateCoffee function.
+//Add Event Listener for when drop menu is changed then execute updateCoffee function.
 
 roastSelection.addEventListener("change", updateCoffees);
 
@@ -81,22 +81,51 @@ var submitButton = document.querySelector('#submit');
 tbody.innerHTML = renderCoffees(coffees.reverse());
 
 
-// Following is to filter the coffee names in response to user input to search bar...
-var coffeeInput = document.getElementById("search");
+// FILTER COFFEE NAMES AS USER INPUT TO SEARCH BAR...
+let coffeeInput = document.getElementById("search");
 
 coffeeInput.addEventListener('keyup', function () {
-    var search = coffeeInput.value; //this stores the called coffeeInput variable's contents
+    let search = coffeeInput.value;
 
-    // the following stores the filtered coffees array and returns the coffee by name or roast array values
-    var searchFilter = coffees.filter(coffee => {
-        return coffee.name.includes(search) || coffee.roast.includes(search);
-    }); //
-
-    // var searchFilter = coffees.filter(function (coffee) {
-    //     return coffee.name.includes(search) || coffee.roast.includes(search);
-    // }) <--- same function but in standard form.
+    let searchFilter = coffees.filter(coffee => {
+        return coffee.name.toLowerCase().includes(search.toLowerCase()) || coffee.roast.toLowerCase().includes(search.toLowerCase());
+    });
     tbody.innerHTML = renderCoffees(searchFilter);
 })
 
+// ADDING A NEW COFFEE...
+let addingCoffee = (e) => {
 
+    e.preventDefault();
+
+    let selectedRoast = newRoastInput.value;
+    let coffeeName = newCoffee.value;
+    let coffeeID = coffees.length + 1;
+
+    let coffeeToAdd = {id: coffeeID, name: coffeeName, roast: selectedRoast};
+
+    coffees.push(coffeeToAdd);
+
+    updateCoffees();
+}
+
+let newRoastInput = document.getElementById('new-roast-selection');
+let newCoffee = document.getElementById('submitCoffee');
+let submitNewCoffees = document.getElementById("submitNew");
+
+
+submitNewCoffees.addEventListener('click', addingCoffee);
 submitButton.addEventListener('change', updateCoffees);
+
+// -------------music player-------------
+var music= document.getElementById("music");
+var icon= document.getElementById("icon");
+
+var iconplay = function() {
+    if (music.paused){
+        music.play().loop;
+        icon.src ="/files/pause.png"
+    }else {
+        music.pause();
+        icon.src = "/files/play.png"
+    }};
