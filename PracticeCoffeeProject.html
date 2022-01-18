@@ -8,62 +8,86 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!--    MAIN CSS-->
-    <link rel="stylesheet" href="/css/practiceCoffee.css">
-    <title>Coffee</title>
-</head>
-<body>
-    <div class="container">
-        <div class="row ">
-                <h1 style="text-align: center">Coffee!</h1>
-            <hr>
 
-<!--Coffee names and roast type being added from javascript file-->
-            <div class="col-6">
-                <div id="coffees"></div>
-            </div>
-<!--Roast selection and user text-input container-->
-            <div class="col-6">
-                <form>
-                    <label for="roast-selection"><h5>Roast</h5></label>
-                    <select class="roast-option form-select mb-3" id="roast-selection">
-                        <option selected id="all">all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <label for="roast-selection"><h5>Coffee Name</h5></label>
-                        <input class="col-12 mb-3 form-control"
-                               type="text"
-                               id="search"
-                               placeholder="Enter Coffee Name...">
-                    <button type="submit" class="col-12 mb-2 btn btn-primary btn-lg btn-block " id="submit" >Submit</button>
-                 </form>
-            <hr>
-<!--   Second portion Roast selection and user text-input container -->
-                <h2 class="mt-4" style="text-align:center">Add a Coffee</h2>
-                <form>
-                    <label for="roast-selection"><h5>Roast</h5></label>
-                    <select class="roast-selection form-select mb-3">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <label for="roast-selection"><h5>Name</h5></label>
-                    <input class="col-12 mb-3 form-control"
-                           type="text"
-                           id="">
-                    <button type="submit" class="col-12 mb-2 btn btn-primary btn-lg btn-block">Submit</button>
-                </form>
+    <!--    MAIN CSS-->
+    <link rel="stylesheet" href="css/stylepractice.css">
+
+    <!--    Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Comforter+Brush&family=Great+Vibes&family=Lobster&family=Monoton&family=Montserrat:wght@100&family=Neonderthaw&family=Pacifico&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+
+    <title>Coffee Project</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="headline">
+        <h1 style="text-align: center; color: gainsboro" class="title p-5">
+            <span>C</span>
+            <span>o</span>
+            <span>f</span>
+            <span>f</span>
+            <span>e</span>
+            <span>e</span>
+        </h1>
+    </div>
+    <hr> <!-- moved div and hr out of row to separate from content body-->
+
+    <div class="row">
+        <!--Coffee names and roast type being added from javascript file-->
+        <div class="col-6">
+            <div id="coffees" class="row"> <!-- added class row to make two columns for rendered coffees-->
+                <!-- coffees render from JS here-->
             </div>
         </div>
-    </div>
+
+        <!--Roast selection and user text-input container-->
+        <div class="col-md-6">
+            <form>
+                <label for="roast-selection"><h5>Roast</h5></label>
+                <select class="roast-option form-select mb-3" id="roast-selection">
+                    <option selected id="all">all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="roast-selection"><h5>Coffee Name</h5></label>
+                <input class="col-12 mb-3 form-control"
+                       type="text"
+                       id="search"
+                       placeholder="Enter Coffee Name...">
+                <button type="submit" class="col-12 mb-2 btn btn-primary btn-lg btn-block shadow" id="submit" >Submit</button>
+            </form>
+            <hr>
+
+            <!--   Second portion Roast selection and user text-input container -->
+            <h2 class="mt-4" style="text-align:center">Add a Coffee</h2>
+            <form>
+                <label for="roast-selection"><h5>Roast</h5></label>
+                <select id="new-roast-selection" class="roast-selection form-select mb-3">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="roast-selection"><h5>Name</h5></label>
+                <input class="col-12 mb-3 form-control"
+                       type="text"
+                       id="Entry">
+                <button id="addition" type="submit" class="col-12 mb-2 btn btn-primary btn-lg btn-block shadow">Submit</button>
+            </form>
+
+        </div> <!-- column end-->
+    </div> <!-- Row End-->
+</div> <!-- CONTAINER END-->
 
 
 
 
 
-        <!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
