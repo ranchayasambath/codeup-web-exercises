@@ -9,11 +9,12 @@ var str="bJIENsdfRAIRVIrsRFAijgRar";
 //     }i++;
 // };
 
-// for (let i=0 ; i< str.length; i++){
-//     // var char = str.charAt(i)
-//     if(str.charAt(i) === str.charAt(i).toLowerCase()){
-//         console.log(str.charAt(i) + " is lower case.");
-//     }else{
-//         console.log(str.charAt(i) + " is upper case.")
-//     }
-// };
+for (let i=0 ; i< str.length; i++){
+    // var char = str.charAt(i)
+    if(str.charAt(i) === str.charAt(i).toLowerCase()){
+        console.log(str.charAt(i) + " is lower case.");
+    }else{
+        console.log(str.charAt(i) + " is Upper case.")
+    }
+};
+
