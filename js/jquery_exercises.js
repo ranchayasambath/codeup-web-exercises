@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 // $(".codeup").css({"border":"solid 1px", "color": "red"});
 
-$("li").css("font-size","20px");
+// $("li").css("font-size","20px");
 
 // $("h1").css({"border":"solid 1px", "color":"blue", "background-color":"orange" });
 // $("p").css({"border":"solid 1px", "color":"blue", "background-color":"orange" });
