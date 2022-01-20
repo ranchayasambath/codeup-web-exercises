@@ -17,5 +17,6 @@ $(document).ready(function(){
 // $("li").css({"border":"solid 1px", "color":"blue", "background-color":"orange" });
 
 $("h1,p,li").css({"border":"solid 1px", "color":"blue", "background-color":"orange" });
+
 var heading = $("h1").html();
 alert (heading);
