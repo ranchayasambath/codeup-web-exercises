@@ -29,12 +29,12 @@ $(document).ready(function(){
 // var heading = $("h1").html();
 // alert (heading);
 
-// --------------------------------------------------------
+// ---------------Mouse Event----------------------
 $("h1").click(function(){
     // $("h1").css("background-color","orange")
     $(this).css("background-color","orange")
 });
-// ----------------------------------
+// -----------------------------------------------
 $("p").dblclick(function(){
     // $("p").css("font-size","18px")
     $(this).css("font-size","18px")
@@ -49,5 +49,11 @@ $("li").hover(
         $(this).css("color","black");
     }
 );
-// ------------------------------------------------
+// -----------------Keyboard Event---------------------
 
+$("#input").keypress(function(){
+    var i= $(this).val();
+
+    $("#p-one").html(i);
+});
+// -----------------------------------
