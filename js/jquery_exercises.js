@@ -51,7 +51,7 @@ $("li").hover(
 );
 // -----------------Keyboard Event---------------------
 
-$("#input").keypress(function(){
+$("#input").keyup(function(){
     var i= $(this).val();
 
     $("#p-one").html(i);
