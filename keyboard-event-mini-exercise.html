@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Keyboard Events Mini-Exercise</title>
+</head>
+<body>
+<h1>Keyboard Events Mini-Exercise</h1>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+  $(document).ready(function() {
+    "use strict";
+    $(document).on("keydown",function(e){
+      if (e.key ==="a"){
+      alert("Welcome!")
+      }
+      if(e.key ==="c"){
+        alert("Logout?");
+      }
+      if(e.key ==="p"){
+        prompt("Enter Username");
+      }
+    })
+
+    // $(document).on('keydown', function(event) {
+    //   input= input + (event.keyCode);
+    //   if (input === a){
+    //     alert("Welcome!")
+    //   }if (input === c){
+    //     alert("Logout?")
+    //   }if (input === p) {
+    //     prompt("Enter Username.")
+
+        // TODO: when the user types the letter 'a', pop up an alert that says "Welcome!"
+
+        // TODO: when the user types the letter 'c', pop up a confirm that says "Logout?"
+        // TODO: when the user types the letter 'p', prompt the user to enter their username
+      });
+</script>
+</body>
+</html>
