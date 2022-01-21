@@ -5,7 +5,7 @@ $(document).keyup(function(event){
 });
     var input = "";
     var key = '3838404037393739666513';
-    $(document).on('keyup', function(event) {
+    $(document).on('keydown', function(event) {
         input+= (event.keyCode);
         console.log(input)
         if (input === key){
@@ -19,7 +19,7 @@ $(document).keyup(function(event){
             //     'mozallowfullscreen="true" scrolling="no"></iframe>'
 
         }
-        // if the first input is not the same as the first key clear the input;
+        // if the sequence of  input is not the same as the first key clear the input;
         if (!key.indexOf(input)) return;
         // then  return any key pressed back to an empty string
         return input = ("" + event.keyCode);
