@@ -11,28 +11,11 @@ $(document).keyup(function(event){
         if (input === key){
             alert("You unlocked 30 Lives");
             $("#game").html('<iframe id="game" src="https://www.retrogames.cc/embed/16841-contra-usa.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>')
-            $("body").css("background-color","black");                                                                                          $("title").html("");
+            $("body").css("background-color","black");
             $(document).off();
-        }if(key.indexOf(input)){
+        }if(key.search(input)){
             input = ("");
         }});
-
-
-
-
-
-        // input+= (event.keyCode);
-        // console.log(input)
-        // if (input === key){
-        //     alert("Cheat Activated");
-        //     // audio.play();
-        //     $("#game").html('<iframe id="game" src="https://www.retrogames.cc/embed/16841-contra-usa.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>')
-        // }
-        // // if the sequence of  input is not the same as the first key clear the input;
-        // if (!key.indexOf(input)) return;
-        // // then  return any key pressed back to an empty string
-        // return input = ("" + event.keyCode);
-
 
 
 
