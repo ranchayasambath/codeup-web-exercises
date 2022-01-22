@@ -8,14 +8,18 @@ $(document).keyup(function(event){
     $(document).on('keydown', function(event) {
         input = input + (event.keyCode);
         console.log(input);
-        if (input === key){
+        if (input === key) {
             alert("You unlocked 30 Lives");
             $("#game").html('<iframe id="game" src="https://www.retrogames.cc/embed/16841-contra-usa.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>')
-            $("body").css("background-color","black");
+            $("body").css("background-color", "black");
             $(document).off();
-        }if(key.search(input)){
+
+        } else if (!key.search(input)) {
+            return input + ("");
+        } else {
             input = ("");
-        }});
+        }
+        });
 
 
 
