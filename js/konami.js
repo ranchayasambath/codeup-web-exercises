@@ -14,12 +14,11 @@ $(document).keyup(function(event){
             $("body").css("background-color", "black");
             $(document).off();
 
-        } else if (!key.search(input)) {
-            return input + ("");
-        } else {
-            input = ("");
-        }
-        });
+        }else{
+            // if input is not within the index of key reset input back to empty string:
+            if (key.search(input)){
+            input= ("")
+        }}});
 
 
 
