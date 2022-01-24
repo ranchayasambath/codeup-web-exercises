@@ -7,12 +7,12 @@ $(document).keyup(function(event){
     var key = '3838404037393739666513';
     $(document).on('keydown', function(event) {
 
-        if (key.indexOf(input)){
+        while (key.indexOf(input)){
             if(key.indexOf(input)!== key){
                 input = ("");
             }
-        }
-        input = input + (event.which);
+        }  input = input + (event.which);
+
         console.log(input);
         if (input === key) {
             alert("You unlocked 30 Lives");
