@@ -30,7 +30,10 @@ $(document).keyup(function(event){
                 "<span>M</span>\n" +
                 "<span>o</span>\n" +
                 "<span>d</span>\n" +
-                "<span>e</span>").delay(13000).fadeOut().css({"text-align":"center","font-size":"5em"});
+                "<span>e</span>").css({"text-align":"center","font-size":"5em"}).dblclick(function(){
+                $(this).fadeOut();
+            });
+
             $(document).off();
         }});
 

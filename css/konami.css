@@ -2,7 +2,7 @@ span{
     font-family: 'Press Start 2P';
     display: inline-block;
     font-weight: bolder;
-    animation: flicker 1s infinite ;
+    animation: flicker 1s linear infinite  ;
 }
 /* Animate neon flicker */
 @keyframes flicker {
@@ -10,11 +10,13 @@ span{
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
 
         box-shadow: 0 0 .5rem #fff,
-        inset 0 0 .5rem #fff,
+        inset 0 0 1rem #fff,
         0 0 2rem ,
         inset 0 0 2rem ,
         0 0 4rem ,
         inset 0 0 4rem ;
+        border-radius: 5px;
+
     }
 
     20%, 24%, 55% {
@@ -57,11 +59,3 @@ span:nth-child(10){
 span:nth-child(11){
     animation-delay: 5.5s;
 }
-
-
-
-
-
-
-
-
