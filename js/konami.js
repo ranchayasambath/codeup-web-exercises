@@ -3,6 +3,7 @@
 $(document).keyup(function(event){
     console.log(event.keyCode);
 });
+
     var input = "";
     var key = '3838404037393739666513';
     $(document).on('keydown', function(event) {
@@ -15,9 +16,21 @@ $(document).keyup(function(event){
 
         console.log(input);
         if (input === key) {
-            alert("You unlocked 30 Lives");
+            alert("You have added 30 lives!");
             $("#game").html('<iframe id="game" src="https://www.retrogames.cc/embed/16841-contra-usa.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>')
-            $("body").css("background-color", "black");
+            $("body").css({"background-color": "black","color":"white"});
+            $("h1").html("" +
+                "<span>A</span>\n" +
+                "<span>r</span>\n" +
+                "<span>c</span>\n" +
+                "<span>a</span>\n" +
+                "<span>d</span>\n" +
+                "<span>e</span>\n" +
+                "<span> </span>\n" +
+                "<span>M</span>\n" +
+                "<span>o</span>\n" +
+                "<span>d</span>\n" +
+                "<span>e</span>").delay(13000).fadeOut().css({"text-align":"center","font-size":"5em"});
             $(document).off();
         }});
 
