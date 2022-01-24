@@ -1,20 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <style>
-        .invisible {
-            visibility: hidden;
-        }
-        .highlight {
-            background-color: #90caf9;
-            margin:1em 0 1em 0;
-            padding: 1em 0 1em 0;
-            border-radius: 10px;
-        }
-        dt,dd,button{
-            text-align: center;
-        }
-    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -24,7 +11,7 @@
     <title>Jquery-Faq</title>
 </head>
 <body>
-<button class="#unhide-button">Show/Hide Answers</button>
+<a class="#unhide-button">Show/Hide Answers</a>
 
 <p><h1>10 FAQS about Nation Park:</h1></p>
 
@@ -71,26 +58,131 @@
     <dt>What is the most-visited national park?</dt>
     <dd class="invisible">Blue Ridge Parkway with 14.1 million recreational visits.
     </dd>
-
 </dl>
+<h3>Acadia National Park</h3>
+<ul id="arcadia-park">
+    <li>
+        From the north, it’s a short and somewhat steep hike to the top of the 1,530-foot peak that first sees the
+        glow of sunrise over the Atlantic. Views of the long, rocky ridge of Dorr Mountain keep you company on the way up. Give yourself an hour-and-a-half to reach the summit.
+    </li>
+    <li>
+        An easy, slightly graded walk starts on the south shore of supremely photogenic Jordan Pond, with the twin buttes known
+        as the Bubbles looming across the water. The trail network around Jordan Pond offers a variety of lengths and destinations—circle the pond or take a wooded hike beneath the cliffs of Pemetic Mountain.
+    </li>
+    <li>
+        The high point of Mount Desert Island’s western half, 681-foot Acadia Mountain looks out over the blue inlet of Somes Sound,
+        often misidentified as a fjord, but not without resemblance to Scandanavia’s dramatic flooded valleys. Set aside four hours for the sometimes steep loop that also passes over nearby St. Sauveur Mountain.
+    </li>
+    <li>
+        Just next door to gentler Gorham Mountain, a trip up the Beehive is not for the faint of heart.
+        A deceivingly short half-mile route includes steep switchbacks, exposed ledges, and segments where iron rungs provide hand- and footholds for near-vertical assents.
+        The reward is an unsurpassed view of the Atlantic and of Acadia’s beaches and cliffs.
 
+    </li>
 
+</ul>
+<h3>Grand Canyon National Park</h3>
+<ul id="grand-canyon-park">
+    <li>
+        Winter means fewer crowds, and fewer crowds means more one-on-one time with knowledgeable park rangers.
+        Use this as an opportunity to ask questions about the geology, enjoy longer, more in-depth tours, or simply take a deep breath and appreciate the solitude.
+        When else will you have the opportunity to have a 1.2 million-acre park all to yourself?
+    </li>
+    <li>
+        Of the park’s three entrances, only two—the South Rim and Desert View—remain open year-round.
+        And while each side has its perks, the easternmost entrance (Desert View) ranks as the most impressive.
+        For starters, it’s more remote and harder to get to, so you’re less likely to get stuck behind other cars.
+        Plus, if you’re driving up from Flagstaff, you’ll enjoy an incredibly scenic route along US 89, through National Forest, painted desert, and Navajo land.
+    </li>
+    <li>
+        For an entrance fee of $30 per vehicle, visitors certainly get their money’s worth.
+        The admission includes access to all sites within the park, as well as parking, shuttle bus service, and, most importantly, access to guided ranger tours.
+        The website’s calendar offers detailed descriptions of the various geology talks and wildlife tours scheduled throughout the week—a worthwhile resource,
+        if you want some of those burning questions (Why are the rocks red? How deep is Grand Canyon? When did it form?) answered.
+    </li>
+    <li>
+        There are six hotels located inside the sprawling park, though only one of them, El Tovar Hotel, truly caters to the luxury set.
+        Built right on the rim, the 1905 Swiss-style chalet couples fabulous views with high-end dining (Teddy Roosevelt and Albert Einstein both were guests here).
+        Just don’t expect to enjoy it all from your window: architect Charles Whittlesey oriented the building in such a way that guests are forced to venture outside their rooms and experience the canyon up-close.
+    </li>
 
+</ul>
+<h3>Biscayne National Park</h3>
+<ul id="biscayne-park">
+    <li>
+        One of Biscayne National Park’s claims to fame is its collection of six separate shipwrecks, the oldest of which is a 1,480-ton iron-hulled steamship dating back to 1878.
+        The Maritime Heritage Trail, explained Johnson, offers exciting opportunities for snorkelers to experience a shipwreck in a beautiful natural setting. Access, of course, is by boat and flipper only.
+    </li>
+    <li>
+        Most travelers begin a trip to Biscayne National Park at the Dante Fascell Visitor Center: an unflashy boathouse-type structure that offers unlimited resources for newbies to the region.
+        From here, you can visit a museum that explains the park’s different ecosystems (there are four, in case you’re wondering: mangroves, Biscayne Bay, Florida Keys, coral reef), or speak to a park ranger about renting a boat.
+    </li>
+    <li>
+        Boca Chita, a small island off the northern tip of Elliott Key, can only be accessed by boat, and is a must-see for anyone paddling his or her way through the bay.
+        The island’s centerpiece is an impressive 55-foot-tall lighthouse that dates back to the 1930s,
+        when the island was still privately owned. Nature enthusiasts should hike the half-mile promenade that curves along the edge of the harbor, ringed with swaying Thatch Palms and stunning views.
+
+        When night falls, plan on sticking around. The utterly secluded Boca Chita campground offers picnic tables and BBQ grills, and aside from the overnight docking fee you’ll pay upon arrival ($25),
+        use of the campgrounds is totally free. As the sun sets, look north—you can see the Miami skyline glowing in the distance.
+    </li>
+    <li>
+        Though Biscayne National Park isn’t technically considered part of the Florida Keys, you’d never know it.
+        The park’s combination of aquamarine waters, brilliant emerald islands, and coral reefs represent a truly remarkable sight, especially for first-time visitors to Florida. And the best way to see it all is to get out on the water.
+
+        The park makes it easy for visitors to rent boats right at the dock. Simply show up at the visitor center to sign out a paddleboard or kayak,
+        and away you go. Soon, you’ll be paddling through ancient rows of mangroves, but no one’s stopping you from charting your own course. With full access to Biscayne Bay’s seven-mile expanse,
+        you’ll only be limited by your own sense of adventure (and rowing stamina).
+    </li>
+</ul>
+<button id="list-background-button">Highlight Last Li's</button>
 <script src="/js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
     $(document).ready(function () {
-        $("button").click(function (event) {
+        $("a").click(function (event) {
             event.preventDefault();
             $("dd").toggleClass("invisible");
         });
         $("dt").click(function (event) {
             event.preventDefault();
             $(this).toggleClass("highlight");
-        })
+        });
+        $("button").click(function(event){
+            event.preventDefault();
+            $("ul").each(function(event){
+                $(this).children().last().toggleClass("highlight-yellow")
+            });
+        });
+        $("h3").click(function(event) {
+            $(this).next().toggleClass("bold")
+        });
+        $("li").click(function(event){
+            $(this).parent().children().first().toggleClass("blue")
+        });
     });
 
 </script>
 </body>
-
+<style>
+    a{
+        background-color: #90caf9;
+    }
+    .invisible {
+        visibility: hidden;
+    }
+    .highlight {
+        background-color: #90caf9;
+        margin:1em 0 1em 0;
+        padding: 1em 0 1em 0;
+    }
+    .highlight-yellow{
+        background-color:yellow;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .blue{
+        color: blue;
+    }
+</style>
 </html>
