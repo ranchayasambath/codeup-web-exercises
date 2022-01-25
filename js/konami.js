@@ -7,14 +7,15 @@ $(document).keyup(function(event){
     var input = "";
     var key = '3838404037393739666513';
     $(document).on('keydown', function(event) {
-        input = input + (event.which);
+
 // check input if its equal to the first index of key
         while (key.indexOf(input)){
             // if input is outside of first index reset string.
             if(key.indexOf(input)!== key.indexOf(0)){
                 input = ("");
             }
-        }
+        }  input = input + (event.which);
+
         console.log(input);
         if (input === key) {
             alert("You have added 30 lives!");
