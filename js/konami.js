@@ -12,7 +12,7 @@ $(document).keyup(function(event){
         while (key.indexOf(input)){
             // if input is outside of first index of 0 position "38" or any combination of string different from what's placed inside key variable
             // , reset string.
-            if(key.indexOf(input)!== key.indexOf(0)){
+            if(input!== key.indexOf(0)){
                 input = ("");
             }
         }  input = input + (event.which);
