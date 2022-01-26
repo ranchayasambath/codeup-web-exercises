@@ -34,7 +34,9 @@
         "title": "Nailgun",
         "quantity": 260,
         "categories": [
-            "tool"
+            "tool",
+            "air pressured",
+            "indoor"
         ],
         "price": 140
 },
@@ -42,7 +44,9 @@
         "title": "Chainsaw",
         "quantity": 60,
         "categories": [
-            "tool"
+            "tool",
+            "gas",
+            "outdoor"
         ],
         "price": 190
     }

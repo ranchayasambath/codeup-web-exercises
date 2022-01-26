@@ -2,23 +2,29 @@
 <html>
 <head>
     <title>Online Store</title>
+
+<!--    bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
+<table class="table table-bordered table-responsive " id="products">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
+            <th scope="col">Title</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Categories</th>
+            <th scope="col">Type</th>
+            <th scope="col">Location</th>
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
+<div id="button" style="text-align: center"></div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -34,15 +40,16 @@ $.ajax("../js/data/inventory.json").done(function(data, status){
         $.get("../js/data/inventory.json").done(function(data){
             for (let i=0;i<data.length; i++){
                 $("#insertProducts").append("<tr>");
-                $("#insertProducts").append("<td>" + data[i].title +"</td>");
-                $("#insertProducts").append("<td>" + data[i].quantity +"</td>");
+                $("#insertProducts").append('<td>' + data[i].title +"</td>");
+                $("#insertProducts").append('<td>' + data[i].quantity +"</td>");
                 // $("#insertProducts").append("<td>" + data[i].categories +"</td>");
-                $("#insertProducts").append("<td>" + data[i].price +"</td>");
-               data[i].categories.forEach(function(i) {
-                   $("#insertProducts").append("<td>" + i + "</td>");
-                   $("#insertProducts").append("</tr>");
-               })}})};
-    $("#products").append("<button>refresh</button>");
+                $("#insertProducts").append('<td>'+ data[i].price +"</td>");
+                data[i].categories.forEach(function(i) {
+                   $("#insertProducts").append('<td>' + i + "</td>");
+                })
+                $("#insertProducts").append("</tr>");
+               }})};
+    $("#button").append('<button class="btn btn-success btn-lg mt-3 " >refresh</button>');
     $("button").click(render());
 
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
@@ -50,6 +57,10 @@ $.ajax("../js/data/inventory.json").done(function(data, status){
     //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
+<style>
+
+
+</style>
 
 </body>
 </html>
