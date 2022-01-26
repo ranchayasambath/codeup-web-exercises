@@ -12,19 +12,9 @@
 
 </head>
 <body>
-<div id="post">
+<div class="container p-5 bg-light" style="text-align:center" id="post">
 
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <!--<script src="/js/jquery-2.2.4.js"></script>-->
@@ -34,10 +24,10 @@
     $.ajax("../js/data/blog.json").done(function(data){
         for (let i=0; i < data.length; i++){
             data[i].categories.forEach(function(i){});
-            $("#post").append(`<div><h1>${data[i].title}</h1></div>`);
-            $("#post").append(`<div><h2>${data[i].categories}</h2></div>`);
-            $("#post").append(`<div><h3>${data[i].date}</h3></div>`);
-            $("#post").append(`<div><p>${data[i].content}</p></div>`);
+            $("#post").append(`<h1 class="p-3 border border-success text-white bg-secondary rounded">${data[i].title}</h1>`);
+            $("#post").append(`<h2 class="p-2">${data[i].categories}</h2>`);
+            $("#post").append(`<h3 class="p-1">${data[i].date}</h3>`);
+            $("#post").append(`<p class="p-3 border border-danger bg-white rounded">${data[i].content}</p>`);
             }})
 })();
 </script>
