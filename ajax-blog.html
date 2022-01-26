@@ -24,8 +24,8 @@
     $.ajax("../js/data/blog.json").done(function(data){
         for (let i=0; i < data.length; i++){
             data[i].categories.forEach(function(i){});
-            $("#post").append(`<h1 class="p-3 border border-success text-white bg-secondary rounded">${data[i].title}</h1>`);
-            $("#post").append(`<h2 class="p-2">${data[i].categories}</h2>`);
+            $("#post").append(`<h1 class="p-3 border border-success text-white bg-dark rounded">${data[i].title}</h1>`);
+            $("#post").append(`<h2 class="p-2 text-success">${data[i].categories}</h2>`);
             $("#post").append(`<h3 class="p-1">${data[i].date}</h3>`);
             $("#post").append(`<p class="p-3 border border-danger bg-white rounded">${data[i].content}</p>`);
             }})
