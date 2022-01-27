@@ -18,12 +18,14 @@
     <div class="card-container min-vh-100 d-flex justify-content-center align-items-center">
         <div id="circle-1" class="position-absolute rounded-circle opacity-80"></div>
         <div id="circle-2" class="position-absolute rounded-circle opacity-80"></div>
-                    <!--card-->
-        <div class="col-12 p-5 shadow-4 rounded-9 position-absolute" id="card" data-tilt data-tilt-reset="false" data-tilt-reverse="true" data-tilt-full-page-listening>
+                        <!--card-->
+        <div class="col-12 p-5 shadow-4" id="card" data-tilt data-tilt-reset="false" data-tilt-reverse="true" data-tilt-full-page-listening>
+                    <!-- card content-->
             <div class="col-12 text-light opacity-80 fw-lighter " id="post"></div>
         </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+                     <!-- tilt js-->
 <script type="text/javascript" src="js/vanilla-tilt.js"></script>
 
 <script>
@@ -37,7 +39,7 @@
                            <p>${content.content}</p>`
             $('#post').append(contents)
         });
-    })
+    });
 })();
 </script>
 <style>
@@ -50,7 +52,7 @@
         border-radius:2em;
         height: auto;
         width: 50%;
-        /*"hue saturation lightness alpha" for transparency effect */
+        /*"hue saturation lightness[alpha]" for transparency effect */
         background: hsla(0,0%,100%,0.2) ;
         backdrop-filter: blur(.7em);
     }
