@@ -31,9 +31,9 @@
     "use strict";
     $.ajax("../js/data/blog.json").done(function(data){
         for (let i=0; i < data.length; i++){
-            let categories= data[i].categories.forEach(function(i){});
+            data[i].categories.forEach(function(i){});
             $("#post").append(`<h1 class="">${data[i].title}</h1>`);
-            $("#post").append(`<h2 class="">${categories}</h2>`);
+            $("#post").append(`<h2 class="">${data[i].categories}</h2>`);
             $("#post").append(`<h3 class="">${data[i].date}</h3>`);
             $("#post").append(`<p class="">${data[i].content}</p>`);
             }})
