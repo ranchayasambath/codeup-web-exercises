@@ -19,7 +19,7 @@
         <div id="circle-1" class="position-absolute rounded-circle opacity-80"></div>
         <div id="circle-2" class="position-absolute rounded-circle opacity-80"></div>
                     <!--card-->
-        <div class="col-12 p-5 shadow-4 rounded-9" id="card" data-tilt data-tilt-reset="false" data-tilt-reverse="true" data-tilt-full-page-listening>
+        <div class="col-12 p-5 shadow-4 rounded-9 position-absolute" id="card" data-tilt data-tilt-reset="false" data-tilt-reverse="true" data-tilt-full-page-listening>
             <div class="col-12 text-light opacity-80 fw-lighter " id="post"></div>
         </div>
 
@@ -30,13 +30,14 @@
 (function() {
     "use strict";
     $.ajax("../js/data/blog.json").done(function(data){
-        for (let i=0; i < data.length; i++){
-            data[i].categories.forEach(function(i){});
-            $("#post").append(`<h1 class="">${data[i].title}</h1>`);
-            $("#post").append(`<h2 class="">${data[i].categories}</h2>`);
-            $("#post").append(`<h3 class="">${data[i].date}</h3>`);
-            $("#post").append(`<p class="">${data[i].content}</p>`);
-            }})
+        $.each(data,function(i,content){
+            let contents =`<h1>${content.title}</h1>
+                           <h2>${content.categories}</h2>
+                           <h3>${content.date}</h3>
+                           <p>${content.content}</p>`
+            $('#post').append(contents)
+        });
+    })
 })();
 </script>
 <style>
@@ -71,8 +72,6 @@
         /*bottom: 7em;*/
         background: radial-gradient(#006db3,#29b6f6);
     }
-
 </style>
-
 </body>
 </html>
