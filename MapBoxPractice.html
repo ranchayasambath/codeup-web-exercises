@@ -28,13 +28,32 @@
 
 <!-- Custom JS -->
 <script>
+    // Mapbox Token
     mapboxgl.accessToken = "pk.eyJ1IjoiamFjay13ZWItZGV2IiwiYSI6ImNreXhoYzBxaDAyaGgyb2x1cWp5ZjVhbHUifQ.8szqPZg5LssH9bEsdTbkDw";
+    // Starting position of Mapbox
+
     var map = new mapboxgl.Map({
-        container: 'map',
+        container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-98.4916, 29.4252]
+        zoom: 10, // 0-21 starting zoom view
+        center: [-98.4916, 29.4252] // location position
     });
+
+    // Geocode Function:
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+
+    // find location
+
     geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxgl.accessToken).then(function(result) {
         console.log(result);
         map.setCenter(result);
