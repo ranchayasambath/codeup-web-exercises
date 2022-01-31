@@ -9,6 +9,7 @@
     <style>
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
+
     </style>
 <!--    geocoding js-->
     <script src="/js/mapbox-geocoder-utils.js"></script>
@@ -28,7 +29,7 @@
 <!-- Custom JS -->
 <script>
     // MapBox API token
-    mapboxgl.accessToken = "pk.eyJ1IjoiamFjay13ZWItZGV2IiwiYSI6ImNreXhoYzBxaDAyaGgyb2x1cWp5ZjVhbHUifQ.8szqPZg5LssH9bEsdTbkDw";
+    mapboxgl.accessToken = MAPBOX_TOKEN;
 
     // Starting position of Mapbox
     var map = new mapboxgl.Map({
@@ -95,7 +96,7 @@
             dish: 'steak and mashed potato'
 
         }]
-
+// assign starting point for first restaurant :
     geocode(locations[0].street+locations[0].city, mapboxgl.accessToken).then(function(result) {
         map.setCenter(result);
         map.setZoom(8);
