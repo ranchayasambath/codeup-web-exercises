@@ -7,12 +7,13 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <!-- Custom CSS -->
     <style>
-        #map {
-            /* the width and height may be set to any size */
-            width: 100%;
-            height: 700px;
-        }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
     </style>
+<!--    geocoding js-->
+    <script src="/js/mapbox-geocoder-utils.js"></script>
+    <!--Keys.js-->
+    <script src="/js/Keys.js"></script>
 </head>
 <body>
 
@@ -21,9 +22,9 @@
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
+
 <!-- Mapbox JS -->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
 <!-- Custom JS -->
 <script>
     // MapBox API token
@@ -33,31 +34,85 @@
     var map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v9', //mapbox styling
-        zoom: 10, // 0-21 starting zoom view
-        center: [-98.4916, 29.4252] //location position
+        zoom: 9, // 0-24 starting zoom view
+        // center: [-95.32559436567875,29.726122002915442] //starting location position
     });
 
-    // Geocode Function to be used:
-    function geocode(search, token) {
-        var baseUrl = 'https://api.mapbox.com';
-        var endPoint = '/geocoding/v5/mapbox.places/';
-        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-            .then(function(res) {
-                return res.json();
-                // to get all the data from the request, comment out the following three lines...
-            }).then(function(data) {
-                return data.features[0].center;
-            });
-    }
-    // find locations
+    // starting location find restaurant 1:
+    // geocode("2104 61st street, Galveston , TX 77551", mapboxgl.accessToken).then(function(result){
+    //     map.setCenter(result);
+    //     map.setZoom(8);
+    // });
+    // set marker position for restaurant 1 :
+    // const yamatoMarker = new mapboxgl.Marker()
+    //     .setLngLat([ -94.83158034135444,29.27811793867788])
+    //     .addTo(map);
+    // //set popup position:
+    // yamatoPopup = new mapboxgl.Popup()
+    //     .setHTML("<p><h2>Yamato Habachi</h2><h3>Address: 2104 61st street<br>Galveston<br>TX 77551<br> Phone: +1(409) 744-2742</h3></p>")
+    // // set pop up when marker is clicked:
+    // yamatoMarker.setPopup(yamatoPopup);
+    //
+    //
+    // const lazyMarker = new mapboxgl.Marker()
+    //     .setLngLat([-95.61607265991782,29.91879424515835])
+    //     .addTo(map);
+    // lazyPopup = new mapboxgl.Popup()
+    //     .setHTML("<p><h2>Lazy Dog Restaurant & Bar</h2><h3>Address: 20030 Northwest Fwy<br>Houston<br>TX 77065<br> Phone: +1(713) 597-5347</h3></p>")
+    // lazyMarker.setPopup(lazyPopup);
+    //
+    //
+    // const bMarker = new mapboxgl.Marker()
+    //     .setLngLat([ -95.50123021127519,29.970248299415218])
+    //     .addTo(map);
+    // bPopup = new mapboxgl.Popup()
+    //     .setHTML("<p><h2>BJs Restaurant & Brewhouse</h2><h3>Address:7637 Farm to Market 1960 Rd W<br>Houston<br>TX 77070<br> Phone: +1(281) 477-8777</h3></p>")
+    // bMarker.setPopup(bPopup);
+    //
+    //
 
-    geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxgl.accessToken).then(function(result) {
-        console.log(result);
+    const locations = [
+        {
+            name: 'Yamato',
+            street: '2104 61st street',
+            city: 'Galveston, TX, 77551',
+            phone: '+1(409) 744-2742',
+            dish: 'sushi, and sashimi'
+
+        },
+        {
+            name: 'Lazy Dog Restaurant & Bar',
+            street: '20030 Northwest Fwy ',
+            city: 'Houston, TX, 77065',
+            phone: '+1(713) 597-5347',
+            dish: ' burger and fries'
+        },
+        {
+            name: 'BJs Restaurant & Brewhouse',
+            street: '7637 Farm to Market 1960 Rd W',
+            city: 'Houston, TX, 77070',
+            phone: '+1(281) 477-8777',
+            dish: 'steak and mashed potato'
+
+        }]
+
+    geocode(locations[0].street+locations[0].city, mapboxgl.accessToken).then(function(result) {
         map.setCenter(result);
-        map.setZoom(20);
+        map.setZoom(8);
     });
+   locations.forEach(function(restaurant){
+       geocode(restaurant.street+restaurant.city, mapboxgl.accessToken).then(function (result){
+         const eachMarker = new mapboxgl.Marker().setLngLat(result).addTo(map);
+         const eachPopup = new mapboxgl.Popup().setHTML(`<h2 style="text-align: center">${restaurant.name}</h2><h4>Address: ${restaurant.street}<br>${restaurant.city}<br>Phone: ${restaurant.phone}<br> Favorite dish: ${restaurant.dish}</h4>`);
+         eachMarker.setPopup(eachPopup)
+   })});
+
+
+
+
 
 
 </script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 </body>
 </html>
