@@ -19,14 +19,14 @@
         <div class="card col-2" style="text-align: center">
             <div class="cardHeader "><p>${data.list[i].dt_txt.slice(0,10)}</p></div>
             <hr>
-            <div class="temperature "><p>Temperature: ${Math.round(data.list[i].main.temp)} °F</div>
-            <div class="icon "></div>
+            <div class="temperature"><p>Temperature<br> Min : <strong>${Math.round(data.list[i].main.temp_min)} °F / Max : ${Math.round(data.list[i].main.temp_max)} °F</strong></p></div>
+            <div class="icon"></div>
             <hr>
-            <div class="humidity "><p>Humidity: ${data.list[i].main.humidity} %</div>
+            <div class="humidity "><p>Humidity: <strong>${data.list[i].main.humidity} %</strong></p></div>
             <hr>
-            <div class="wind "><p>Wind: ${Math.round(data.list[i].wind.speed)} MPH</div>
+            <div class="wind"><p>Wind: <strong>${Math.round(data.list[i].wind.speed)} MPH</strong></p></div>
             <hr>
-            <div class="pressure "><p>Pressure: ${data.list[i].main.pressure}</div>
+            <div class="pressure"><p>Pressure: <strong>${data.list[i].main.pressure}</strong></p></div>
         </div>`);
     }
 //--------------To update Map-------------------------------------
@@ -39,23 +39,21 @@
         }).done(function (data) {
             $("#city").text("");//<-reset previous title
             $("#insert-card").text("");//<--reset weather cards
-            // console.log('5 day forecast', data);
             $("#city").append(`CURRENT CITY : ${data.city.name.toUpperCase()}`)
-            // loop through every 8 hours of the list
             for (let i = 0; i < data.list.length; i = i + 8) {
                 $("#insert-card").append(`
-    <div class="card col-2">
-        <div class="cardHeader" ><p>${data.list[i].dt_txt.slice(0, 10)}</p></div>
-        <hr>
-        <div class="temperature "><p>Temperature: ${Math.round(data.list[i].main.temp)} °F</div>
-        <div class="icon "></div>
-        <hr>
-        <div class="humidity "><p>Humidity: ${data.list[i].main.humidity} %</div>
-        <hr>
-        <div class="wind "><p>Wind: ${Math.round(data.list[i].wind.speed)} MPH</div>
-        <hr>
-        <div class="pressure "><p>Pressure: ${data.list[i].main.pressure}</div>
-    </div>`);
+      <div class="card col-2" style="text-align: center">
+            <div class="cardHeader "><p>${data.list[i].dt_txt.slice(0,10)}</p></div>
+            <hr>
+            <div class="temperature"><p>Temperature<br> Min : <strong>${Math.round(data.list[i].main.temp_min)} °F / Max : ${Math.round(data.list[i].main.temp_max)} °F</strong></p></div>
+            <div class="icon"></div>
+            <hr>
+            <div class="humidity "><p>Humidity: <strong>${data.list[i].main.humidity} %</strong></p></div>
+            <hr>
+            <div class="wind"><p>Wind: <strong>${Math.round(data.list[i].wind.speed)} MPH</strong></p></div>
+            <hr>
+            <div class="pressure"><p>Pressure: <strong>${data.list[i].main.pressure}</strong></p></div>
+        </div>`);
             }
         })}
 //------------------------Render Map-------------------------------
@@ -80,8 +78,14 @@
         updateCards(lngLat.lat,lngLat.lng)//<--update map based on marker's coordinates
         }
         marker.on('dragend', onDragEnd);
-    });
 //---------------------------------------------------------------------------
 
+
+
+
+
+
+
+});
 
 })();
