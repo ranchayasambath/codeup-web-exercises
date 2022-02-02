@@ -40,7 +40,7 @@
             lon: lng,
             units: "imperial"
         }).done(function (data) {
-            $("#city").text("");//<-reset previous title
+            $("#city").text("");//<-reset previous city
             $("#insert-card").text("");//<--reset weather cards
             $("#city").append(`CURRENT CITY : ${data.city.name.toUpperCase()}`)
             for (let i = 0; i < data.list.length; i = i + 8) {
@@ -74,7 +74,6 @@
             })
             .setLngLat([-97.63275471857908,29.422470681780467])//marker start
             .addTo(map);
-
 //----------------Update Weather Cards on Marker-----------------------------
     function onDragEnd() {
         const lngLat = marker.getLngLat();
@@ -83,11 +82,9 @@
         }
         marker.on('dragend', onDragEnd);
 //--------------------------------Search Function-------------------------------------------
-
 //1.grab and store user input.(done)
 //2.function to convert user input from city to lat and long. (done)(mapbox does it automatically?)
 //3.Send coordinates to update function.(done through call back function)
-
 $("#search-btn").click(function(e){
     e.preventDefault();
     geocode($("#input").val(),mapboxgl.accessToken).then(function (result){
@@ -95,9 +92,9 @@ $("#search-btn").click(function(e){
         const lat= result[1]
         const lng= result[0]
         updateCards(lat,lng)
+        map.flyTo({center: result})
     })
+
 })
-
 });
-
 })();
