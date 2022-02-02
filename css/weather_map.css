@@ -1,9 +1,23 @@
 /*#map {width: 87em;height: 22em}*/
 #map {
+    margin-right: 2em;
     padding-top: 1em;
-    width: auto;
-    height: 50em;
+    width: 100%;
+    height: 40em;
 }
 #insert-card{
     text-align: center;
+}
+.card{
+    color: white;
+    border-radius:2em;
+    height: auto;
+    width: 50%;
+    /*"hue saturation lightness[alpha]" for transparency effect */
+    background: hsla(0,0%,100%,0.2) ;
+    backdrop-filter: blur(.7em);
+}
+body{
+    background-color: #1488cc;
+    background: linear-gradient(to top,#283593,#1976d2);
 }
