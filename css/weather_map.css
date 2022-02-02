@@ -1,2 +1,9 @@
 /*#map {width: 87em;height: 22em}*/
-#map {width: auto;height: auto;}
+#map {
+    padding-top: 1em;
+    width: auto;
+    height: 50em;
+}
+#insert-card{
+    text-align: center;
+}

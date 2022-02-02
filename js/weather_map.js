@@ -1,68 +1,87 @@
-// 1.Retrieve and access data from api.
-// 2.Function to loop through each 24 hours for 5 days // (Weather map has 3 hours update per list element).
-// 4.Method to append the results into html.
-// 5.Implement the methods into dynamic search.
-// 6.Search with moving marker for previous data.
 
+// 1.Update 5 day forecast (finished)
+// 2.Pin location search (finished but marker sucks)
+// 3.Search input (
 
 (function() {
-    "use strict";
-// weather map api
+"use strict";
+//----On start up local Weather-------------------
     $.get("http://api.openweathermap.org/data/2.5/forecast",{
-        APPID: OPEN_WEATHER_APPID,
-        lat: 29.423017,
-        lon: -98.48527,
-        units: "imperial"
-    }).done(function (data) {
-        console.log('5 day forecast', data);
-        // loop through every 8*3 hours
+    APPID: OPEN_WEATHER_APPID,
+    q: "San Antonio",
+    units: "imperial"
+}).done(function (data){
+    console.log('5 day forecast', data);
         $("#city").append(`CURRENT CITY : ${data.city.name.toUpperCase()}`)
-        for (let i=0;i < 40 ;i=i+8){
-            $("#insert-card").append(`
-            <div class="card col-2">
-            <div class="cardHeader row" style="background-color: lightgray"><p>${data.list[i].dt_txt}</p></div>
-            <div class="temperature row"><p>Temperature: ${data.list[i].main.temp} °F</div>
-            <div class="logo row"></div>
+        // loop through every 8 hours of the list
+    for (let i=0;i < data.list.length ;i=i+8){
+        $("#insert-card").append(`
+        <div class="card col-2" style="text-align: center">
+            <div class="cardHeader "><p>${data.list[i].dt_txt.slice(0,10)}</p></div>
             <hr>
-            <div class="humidity row"><p>Humidity: ${data.list[i].main.humidity}</div>
+            <div class="temperature "><p>Temperature: ${Math.round(data.list[i].main.temp)} °F</div>
+            <div class="icon "></div>
             <hr>
-            <div class="wind row"><p>Wind: ${data.list[i].wind.speed} MPH</div>
+            <div class="humidity "><p>Humidity: ${data.list[i].main.humidity} %</div>
             <hr>
-            <div class="pressure row"><p>Pressure: ${data.list[i].main.pressure}</div>
-            </div>`);
-        }
+            <div class="wind "><p>Wind: ${Math.round(data.list[i].wind.speed)} MPH</div>
+            <hr>
+            <div class="pressure "><p>Pressure: ${data.list[i].main.pressure}</div>
+        </div>`);
+    }
+//--------------To update Map-------------------------------------
+    function updateCards(lat,lng) {
+        $.get("http://api.openweathermap.org/data/2.5/forecast",{
+            APPID: OPEN_WEATHER_APPID,
+            lat: lat,
+            lon: lng,
+            units: "imperial"
+        }).done(function (data) {
+            $("#city").text("");//<-reset previous title
+            $("#insert-card").text("");//<--reset weather cards
+            // console.log('5 day forecast', data);
+            $("#city").append(`CURRENT CITY : ${data.city.name.toUpperCase()}`)
+            // loop through every 8 hours of the list
+            for (let i = 0; i < data.list.length; i = i + 8) {
+                $("#insert-card").append(`
+    <div class="card col-2">
+        <div class="cardHeader" ><p>${data.list[i].dt_txt.slice(0, 10)}</p></div>
+        <hr>
+        <div class="temperature "><p>Temperature: ${Math.round(data.list[i].main.temp)} °F</div>
+        <div class="icon "></div>
+        <hr>
+        <div class="humidity "><p>Humidity: ${data.list[i].main.humidity} %</div>
+        <hr>
+        <div class="wind "><p>Wind: ${Math.round(data.list[i].wind.speed)} MPH</div>
+        <hr>
+        <div class="pressure "><p>Pressure: ${data.list[i].main.pressure}</div>
+    </div>`);
+            }
+        })}
+//------------------------Render Map-------------------------------
         mapboxgl.accessToken = WEATHER_MAP_TOKEN;
-        var map = new mapboxgl.Map({
+        const map = new mapboxgl.Map({
             container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/streets-v9', //mapbox styling
+            style: 'mapbox://styles/mapbox/streets-v11', //mapbox styling
             zoom: 10,// 0-24 starting zoom view
-            center: [-98.4916, 29.4260] //starting location position
+            center: ([-98.48527,29.423017])//starting position
         });
-
-        var marker = new mapboxgl.Marker({
-            draggable: true,
-        })
-            .setLngLat(result)
+//---------------Draggable Marker------------------------------------
+        const marker = new mapboxgl.Marker({
+            draggable: true
+            })
+            .setLngLat([-97.63275471857908,29.422470681780467])//marker start
             .addTo(map);
 
-        // $("#temp1").append(`<p>Temperature: ${data.list[0].main.temp}°F`)
-        // $("#humid1").append(`<p>Humidity: ${data.list[0].main.humidity}`)
-        // $("#wind1").append(`<p>Wind: ${data.list[0].wind.speed}`)
-        // $("#pressure1").append(`<p>Pressure: ${data.list[0].main.pressure}`)
-        // $("#date1").append(`<p>${data.list[0].dt_txt}</p>`)
-
+//----------------Update WeatherMap on Marker-----------------------------
+    function onDragEnd() {
+        const lngLat = marker.getLngLat();
+        // map.flyTo({center:lngLat})
+        updateCards(lngLat.lat,lngLat.lng)//<--update map based on marker's coordinates
+        }
+        marker.on('dragend', onDragEnd);
     });
-
-
-
-
-
-
-
-
-
-
-
+//---------------------------------------------------------------------------
 
 
 })();
