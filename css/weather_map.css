@@ -5,7 +5,7 @@
 }
 #stripe{
     background: hsla(0,0%,100%,0.2) ;
-    backdrop-filter: blur(1em);
+    backdrop-filter: blur(.1em);
 }
 canvas{
     border-radius: 1em;
@@ -22,7 +22,7 @@ canvas{
     width: 50%;
     /*"hue saturation lightness[alpha]" for transparency effect */
     background: hsla(0,0%,100%,0.2) ;
-    backdrop-filter: blur(1em);
+    backdrop-filter: blur(.1em);
     transform-origin: 65% 75%;
     transition: transform 1s, filter .5s ease-out;
 }
@@ -55,7 +55,6 @@ body{
     animation: gradient 25s ease infinite;
     height: 3vh;
 }
-
 @keyframes gradient {
     0% {
         background-position: 100% 100%;

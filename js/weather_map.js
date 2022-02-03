@@ -3,7 +3,6 @@
 // 2.Pin location search (finished but marker sucks<-- solved with newer mapbox api)
 // 3.Search input (done)
 //*Bonus place marker on searched city*(done)
-
 (function() {
 "use strict";
 //----On start up local Weather Cards-------------------
@@ -22,6 +21,7 @@
             <div class="cardHeader pt-4"><p>${data.list[i].dt_txt.slice(0,10)}</p></div>
             <hr>
             <div class="temperature"><p>Temperature<br> Min : <strong>${Math.round(data.list[i].main.temp_min)} °F</strong> / Max : <strong>${Math.round(data.list[i].main.temp_max)} °F</strong></p>
+            <strong>${data.list[i].weather[0].main.toUpperCase()}</strong><br>
             ${data.list[i].weather[0].description.toUpperCase()}<br>
             <img class="image" src = "http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt='Weather icon'></div>
             <hr>
@@ -49,6 +49,8 @@
             <div class="cardHeader pt-4"><p>${data.list[i].dt_txt.slice(0,10)}</p></div>
             <hr>
            <div class="temperature"><p>Temperature<br> Min : <strong>${Math.round(data.list[i].main.temp_min)} °F</strong> / Max : <strong>${Math.round(data.list[i].main.temp_max)} °F</strong></p>
+           <strong>${data.list[i].weather[0].main.toUpperCase()}</strong><br>
+           <strong>${data.list[i].weather[0].main.toUpperCase()}</strong><br>
             ${data.list[i].weather[0].description.toUpperCase()}<br>
             <img class="image" src = "http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt='Weather icon'></div>
             <hr>
@@ -97,7 +99,6 @@ $("#search-btn").click(function(e){
         //---Add marker to searched location----
         new mapboxgl.Marker().setLngLat(result).addTo(map);
     })});
-
 //-------------------------Hide Music Toggle-------------------
         $("#hide-music").click(function() {
             $("#icon-play").toggleClass("hidden");
@@ -116,7 +117,7 @@ $(document).ready(function (){
                 }else {
                     music.pause();
                     icon.src = "/files/play.png"
-                }});
-        });
-});
+                }})
+        })
+})
 })();
