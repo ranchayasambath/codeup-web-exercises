@@ -40,24 +40,24 @@ canvas{
     cursor: pointer;
 }
 body{
-    background: linear-gradient(-50deg, #48bfe3,#283593, rgb(224, 84, 8), rgba(255, 183, 0, 0.3));
+    background: linear-gradient(50deg, #48bfe3,#283593, rgb(224, 84, 8), rgba(255, 183, 0, 0.3));
     background-size: 500% 500% ;
     animation: gradient 25s ease infinite;
-    height: 100vh;
+    ;
 }
 #input{
 
     color: white;
     opacity: 100%;
     font-weight: bolder;
-    background: linear-gradient(-50deg, #48bfe3,#283593, rgb(224, 84, 8), rgba(255, 183, 0, 0.3));
+    background: linear-gradient(50deg, #48bfe3,#283593, rgb(224, 84, 8), rgba(255, 183, 0, 0.3));
     background-size: 500% 500% ;
     animation: gradient 25s ease infinite;
     height: 3vh;
 }
 @keyframes gradient {
     0% {
-        background-position: 100% 100%;
+        background-position: 100% 70%;
     }
 
     50% {
@@ -65,7 +65,7 @@ body{
     }
 
     100% {
-        background-position: 100% 100% ;
+        background-position: 100% 70% ;
     }
 }
 #geocoder-container > div {
