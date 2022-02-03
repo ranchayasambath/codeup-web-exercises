@@ -83,9 +83,9 @@
         }
         marker.on('dragend', onDragEnd);
 //--------------------------------Search Function-------------------------------------------
-//1.store user input to mapbox api.(done)
+//1.collect user input for mapbox api.(done)
 //2.find lat and long for input city.(done)(mapbox does it automatically?)
-//3.Send coordinates to update function.(done through call back function)
+//3.Send coordinates to update function.(done)
 $("#search-btn").click(function(e){
     e.preventDefault();
     geocode($("#input").val(),mapboxgl.accessToken).then(function(result){
@@ -94,7 +94,7 @@ $("#search-btn").click(function(e){
         const lng= result[0]
         updateCards(lat,lng)
         map.flyTo({center: result})
-        //---Add marker to searched location----
+        //---Add marker to selected location----
         new mapboxgl.Marker().setLngLat(result).addTo(map);
     })});
 //-------------------------Hide Music Toggle-------------------
@@ -108,14 +108,15 @@ $(document).ready(function (){
 //--------------------------Hide Map/ Display Music Player---------------------------------------
         $("#city").click(function(){
             $("#map").toggleClass("hidden");
-            $("#icon-play").css("display","").click(function() {
-                if (music.paused){
-                    music.play().loop;
-                    icon.src ="/files/pause.png"
-                }else {
-                    music.pause();
-                    icon.src = "/files/play.png"
-                }})
-        })
-})
+            })
+        $("#city").dblclick(function(){$("#icon-play").css("display","").click(function() {
+            if (music.paused){
+                music.play().loop;
+                icon.src ="/files/pause.png"
+            }else {
+                music.pause();
+                icon.src = "/files/play.png"
+            }
+        })});
+});
 })();
