@@ -13,7 +13,7 @@
 }).done(function (data){
     console.log('5 day forecast', data);
         $("#city").append(`CURRENT CITY : <strong>${data.city.name.toUpperCase()}</strong>`)
-        // loop through every 8 hours of the list
+        // loop through every 24 hours of the list
     for (let i=0;i < data.list.length ;i=i+8){
         // console.log(data.list[i].weather[0].description)
         $("#insert-card").append(`
@@ -50,7 +50,6 @@
             <hr>
            <div class="temperature"><p>Temperature<br> Min : <strong>${Math.round(data.list[i].main.temp_min)} °F</strong> / Max : <strong>${Math.round(data.list[i].main.temp_max)} °F</strong></p>
            <strong>${data.list[i].weather[0].main.toUpperCase()}</strong><br>
-           <strong>${data.list[i].weather[0].main.toUpperCase()}</strong><br>
             ${data.list[i].weather[0].description.toUpperCase()}<br>
             <img class="image" src = "http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png" alt='Weather icon'></div>
             <hr>
@@ -72,7 +71,6 @@
         });
 //--------------- Marker---------------------------------------
         const marker = new mapboxgl.Marker({
-            q: "san antonio",
             draggable: true
             })
             .setLngLat([-98.48527,29.423017])//marker start
