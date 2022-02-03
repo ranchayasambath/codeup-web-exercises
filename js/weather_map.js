@@ -1,8 +1,8 @@
 
 // 1.Update 5 day forecast + Icons (finished)
-// 2.Pin location search (finished but marker sucks)
+// 2.Pin location search (finished but marker sucks<-- solved with newer mapbox api)
 // 3.Search input (done)
-//*Bonus place marker on searched city*
+//*Bonus place marker on searched city*(done)
 
 (function() {
 "use strict";
@@ -13,12 +13,12 @@
     units: "imperial"
 }).done(function (data){
     console.log('5 day forecast', data);
-        $("#city").append(`CURRENT CITY : ${data.city.name.toUpperCase()}`)
+        $("#city").append(`CURRENT CITY : <strong>${data.city.name.toUpperCase()}</strong>`)
         // loop through every 8 hours of the list
     for (let i=0;i < data.list.length ;i=i+8){
         // console.log(data.list[i].weather[0].description)
         $("#insert-card").append(`
-        <div class="card col-2">
+        <div class="card col-2 shadow-lg">
             <div class="cardHeader pt-4"><p>${data.list[i].dt_txt.slice(0,10)}</p></div>
             <hr>
             <div class="temperature"><p>Temperature<br> Min : <strong>${Math.round(data.list[i].main.temp_min)} °F</strong> / Max : <strong>${Math.round(data.list[i].main.temp_max)} °F</strong></p>
@@ -42,10 +42,10 @@
         }).done(function (data) {
             $("#city").text("");//<-reset previous city
             $("#insert-card").text("");//<--reset weather cards
-            $("#city").append(`CURRENT CITY : ${data.city.name.toUpperCase()}`)
+            $("#city").append(`CURRENT CITY : <strong>${data.city.name.toUpperCase()}</strong>`)
             for (let i = 0; i < data.list.length; i = i + 8) {
                 $("#insert-card").append(`
-      <div class="card col-2">
+      <div class="card col-2 shadow-lg">
             <div class="cardHeader pt-4"><p>${data.list[i].dt_txt.slice(0,10)}</p></div>
             <hr>
            <div class="temperature"><p>Temperature<br> Min : <strong>${Math.round(data.list[i].main.temp_min)} °F</strong> / Max : <strong>${Math.round(data.list[i].main.temp_max)} °F</strong></p>
@@ -70,9 +70,10 @@
         });
 //--------------- Marker---------------------------------------
         const marker = new mapboxgl.Marker({
+            q: "san antonio",
             draggable: true
             })
-            .setLngLat([-97.63275471857908,29.422470681780467])//marker start
+            .setLngLat([-98.48527,29.423017])//marker start
             .addTo(map);
 //----------------Update Weather Cards on Marker-----------------------------
     function onDragEnd() {
@@ -82,19 +83,40 @@
         }
         marker.on('dragend', onDragEnd);
 //--------------------------------Search Function-------------------------------------------
-//1.grab and store user input.(done)
-//2.function to convert user input from city to lat and long. (done)(mapbox does it automatically?)
+//1.store user input to mapbox api.(done)
+//2.find lat and long for input city.(done)(mapbox does it automatically?)
 //3.Send coordinates to update function.(done through call back function)
 $("#search-btn").click(function(e){
     e.preventDefault();
-    geocode($("#input").val(),mapboxgl.accessToken).then(function (result){
+    geocode($("#input").val(),mapboxgl.accessToken).then(function(result){
         // console.log(result);
         const lat= result[1]
         const lng= result[0]
         updateCards(lat,lng)
         map.flyTo({center: result})
-    })
+        //---Add marker to searched location----
+        new mapboxgl.Marker().setLngLat(result).addTo(map);
+    })});
 
+//-------------------------Hide Music Toggle-------------------
+        $("#hide-music").click(function() {
+            $("#icon-play").toggleClass("hidden");
+        });
+//-------------------------------hide music on page load-------------------------------------------------
+$(document).ready(function (){
+    $("#icon-play").css("display","none")
 })
+//--------------------------Hide Map/ Display Music Player---------------------------------------
+        $("#city").click(function(){
+            $("#map").toggleClass("hidden");
+            $("#icon-play").css("display","").click(function() {
+                if (music.paused){
+                    music.play().loop;
+                    icon.src ="/files/pause.png"
+                }else {
+                    music.pause();
+                    icon.src = "/files/play.png"
+                }});
+        });
 });
 })();

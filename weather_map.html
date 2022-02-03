@@ -11,7 +11,8 @@
 <!-- css file-->
     <link rel="stylesheet" href="css/weather_map.css">
 <!-- Mapbox JS -->
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
 <!--  geocoding js-->
     <script src="/js/mapbox-geocoder-utils.js"></script>
 <!--Keys.js-->
@@ -19,23 +20,33 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="row bg-primary text-white">
-        <div class="col-md-2 align-items-end">WEATHER APP</div>
+    <div class="row text-white" id="stripe">
+        <div class="col-md-2 align-items-end" id="hide-music">WEATHER MAP</div>
         <div class="col-md-8 "></div>
         <div class="col-md-2" id='city'></div>
     </div>
+<!--    search input form-->
     <form class="ml-2 mb-4 mt-4 text-white">
-        <input type="text" placeholder="Search location.." class="form-control" id="input">
-        <button class="btn text-white" id="search-btn"></button>
+        <input type="text/reset" class="form-control border-0" id="input" onmousedown="this.value=''">
+        <button class="btn text-white d-none"  id="search-btn"></button>
     </form>
+<!--    cards container-->
     <div class="row justify-content-center justify-content-around" id="insert-card">
     </div>
-    <div id='map'></div>
+    <div class="map mt-5" id='map'></div>
     </div>
-
+<buton class="media-button" id="icon-play">
+    <img src="/files/play.png" id="icon">
+</buton>
+<audio id="music" loop>
+    <source src="/files/[MP3DOWNLOAD.TO] When you love LoFi Hiphop but also love Metal (Djent)-320k.mp3" type="audio/mp3">
+</audio>
 <!--jquery-->
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <!--custom js-->
 <script src="/js/weather_map.js"></script>
+<!--geocoder plugins DONT NEED LOL!!!-->
+<!--<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">-->
 </body>
 </html>
