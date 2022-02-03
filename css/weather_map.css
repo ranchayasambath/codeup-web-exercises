@@ -20,7 +20,7 @@ canvas{
     border-radius:2em;
     height: auto;
     width: 50%;
-    /*"hue saturation lightness[alpha]" for transparency effect */
+    /*"hue saturation lightness[alpha]" for translucency effect */
     background: hsla(0,0%,100%,0.2) ;
     backdrop-filter: blur(.1em);
     transform-origin: 65% 75%;
@@ -46,7 +46,6 @@ body{
     ;
 }
 #input{
-
     color: white;
     opacity: 100%;
     font-weight: bolder;
@@ -67,10 +66,6 @@ body{
     100% {
         background-position: 100% 70% ;
     }
-}
-#geocoder-container > div {
-    min-width: 50%;
-    margin-left: 25%;
 }
 .hidden{
     display: none;
