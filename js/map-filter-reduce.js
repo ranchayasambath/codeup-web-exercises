@@ -50,9 +50,9 @@ let userExp = users.map(exp => exp.yearsOfExperience);
 console.log(userExp);
 
 let totalExpAvg = userExp.reduce(function(previousValue, currentValue){
-  return previousValue + currentValue / userExp.length;
+  return previousValue + currentValue;
 })
-console.log(`Average years of experience is ${totalExpAvg} years.`);
+console.log(`Average years of experience is ${totalExpAvg/userExp.length} years.`);
 
 // 5.
 
@@ -72,8 +72,8 @@ console.log(longestEmail);
 let nameMap = users.map(names => names.name);
 console.log(nameMap)
 
-let nameList = nameMap.reduce(function(previousValue, currentValue){
-    return `${previousValue} , ${currentValue}`
+let nameList = nameMap.reduce(function(previousValue, currentValue,index){
+    return `Your instructors are: ${previousValue},${currentValue}`
 })
 console.log(nameList)
 
